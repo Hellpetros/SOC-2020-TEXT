@@ -1,0 +1,12 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Github Action for LaTeX
+      uses: xu-cheng/latex-action@1.2.1
