@@ -1,0 +1,18 @@
+1. Úvod
+2. Minulý rok, rozdíly, zlepšení, úpravy
+3. Podrobný popis hardwaru
+    Motherboard
+    SensorBoard
+    Jednotlivé krabice
+    Verze a jejich rozdíly
+    Moduly 
+    Senzory
+    Aktuátory
+4. Podrobný popis softwaru a principu funkce
+    Sdílené knihovny
+    Konfigurace
+    Pinout
+    Sběrnice
+    Blokové diagramy
+5. Co všechno to umí? - možná prohodit s 3kou
+6. Závěr
