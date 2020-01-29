@@ -3,7 +3,9 @@
 3. Podrobný popis hardwaru
     Motherboard
     SensorBoard
-    Jednotlivé krabice
+    Jednotlivé krabice + vnitřky
+    3D tištěné díly + kartuše se silica gelem
+    Těsnění
     Verze a jejich rozdíly
     Moduly 
     Senzory
