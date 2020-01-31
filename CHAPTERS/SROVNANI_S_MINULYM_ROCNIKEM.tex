@@ -1,3 +1,18 @@
 \chapter{Změny oproti minulému roku}
+Na konci minulého roku byl ProtoPlant schopen automaticky regulovat teplotu otevíráním oken, případně spínáním topného tělesa, spínat čerpadla zavlažování, a sbírat data o vlhkosti a teplotě vzduchu. V tomto roce jsem se zaměřil primárně na přidávání funkcí dalších, sekundárně pak na vylepšování těch stávajících.
+Největšími změnami jsou: 
+\begin{itemize}
+    \item nádstavba softwaru pro implementaci vzdáleného ovládání a sledování
+	\item kompletní přepsání softwaru do systému knihoven
+	\item výroba a použití vlastních tištěných spojů
+	\item implementace frameworku pro měření vlhkosti půdy na jednotlivých místech
+	\item implementace podpory senzorů BME280 od Bosch sensortec
+\end{itemize}
 
+Dále jsem s pomocí testovací jednotky instalované ve zkušebním skleníku provedl dlouhodobý test, zaměřený na testování konzistence hodnot naměřených senzory a na spolehlivost ProtoPlantu jako celku. Výsledky byly uspokojující, až na několik poznatků, které jsem využil pro další vylepšování tohoto systému. Mezi tyto poznatky patří:
+\begin{itemize}
+    \item fluktuace dat čtených ze senzorů DHT11 - v průběhu testu jsem tyto senzory nahradil přesnějšími DHT22
+    \item problém s operační pamětí - vyřešen implementací automatického restartu pro vyčištění mezipaměti po týdnu běhu
+\end{itemize}
 \newpage
+
