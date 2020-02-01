@@ -8,3 +8,4 @@ text.out
 text.fls
 text.fdb_latexmk
 text.toc
+*.te~
