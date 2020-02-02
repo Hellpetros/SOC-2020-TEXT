@@ -47,10 +47,10 @@ Ten se skládá z~převodníku USB-UART CP2102N, tranzistorů SS8050-G (slouží
 Nachází se zde i jumper pro přepínání mezi externím programátorem a programátorem přímo na desce.
 
 \paragraph{Sekce H-power}
-V této části desky se nacházejí H-můstky VNH2SP30 společně s regulátory napětí 7805CV-DG (výstup 5VDC) a LM3940IT-3.3 (výstup 3,3VDC). 
+V~této části desky se nacházejí H-můstky VNH2SP30 společně s~regulátory napětí 7805CV-DG (výstup 5VDC) a LM3940IT-3.3 (výstup 3,3VDC). 
 Na verzi PPMB32-F je dále osazen AMS1117-3.3 pro napájení procesoru. 
 
-V dolní části desky se poté nacházejí dva integrované obvody VNH2SP30, z nichž jedno (VNH1) je určeno pro ovládání aktuátorů manipulujících s okny.
+V~dolní části desky se poté nacházejí dva integrované obvody VNH2SP30, z~nichž jedno (VNH1) je určeno pro ovládání aktuátorů manipulujících s~okny.
 VNH2 má několik režimů funkce, podle připojeného výstupu:
 \begin{itemize}
     \item disabled (výstupy jsou deaktivovány)
@@ -58,10 +58,10 @@ VNH2 má několik režimů funkce, podle připojeného výstupu:
     \item heating (VNH je použito pro řízení topné spirály)
 \end{itemize}
 
-Napájení desky je rozděleno do tří okruhů. První z kterého je napájena řídící elektronika je dále rozdělen na dva subokruhy s odlišným napětím (3,3~VDC a 5~VDC).
+Napájení desky je rozděleno do tří okruhů. První z~kterého je napájena řídící elektronika je dále rozdělen na dva subokruhy s~odlišným napětím (3,3~VDC a 5~VDC).
 Rozsah vstupního napětí pro tento okruh je 7,5~VDC až 18~VDC.
 Zbývající 2 okruhy jsou použity pro oddělené napájení jednotlivých výstupů. 
-Jejich napájecí rozsahy jsou rozepsány v tabulce níže.
+Jejich napájecí rozsahy jsou rozepsány v~tabulce níže.
 \begin{table}[h]
     \centering
     \begin{tabular}{llll}
