@@ -19,6 +19,15 @@ Z~důvodu přehlednosti jsem desku rozdělil do několika částí:
 \end{itemize} 
 
 Samotná základní deska má dvě verze. Jejich rozdíly jsou vysvětleny níže.
+Obě verze desky jsou kromě sekce Control osazeny stejným hardwarem, tedy:
+
+\begin{itemize}
+    \item 2x H-můstek VNH2SP30
+    \item regulátory napětí 7805CV-DG od STMicroelectronics
+    \item pinheady pro připojení senzorů, ovládacího panelu a dalších periferií
+    \item svorkovnicemi pro připojení napájecích kabelů a silových výstupů
+    \item 
+\end{itemize}
 
 \paragraph{PPMB32-E}
 Vzhledem k~tomu, že je ProtoPlant veřejně dostupný, nebyl jsem si jist, zda by kompletní osazení takto velké desky zvládl i laik. 
@@ -34,10 +43,42 @@ Integrovaný programátor lze s~pomocí jumperů odpojit a přes programovací p
 
 \paragraph{Sekce Control}
 Jak již bylo zmíněno, tato část desky zahrnuje modul procesoru ESP32-WROOM32D a programovací obvod. 
-Ten se skládá z~převodníku USB-UART CP2102N, tranzistorů SS8050-G (sloužících pro reset procesoru), indikačních LED diod a mikro USB konektoru.
+Ten se skládá z~převodníku USB-UART CP2102N, tranzistorů SS8050-G (sloužících pro reset procesoru), indikačních LED diod a mikro USB konektoru. 
+Nachází se zde i jumper pro přepínání mezi externím programátorem a programátorem přímo na desce.
+
+\paragraph{Sekce H-power}
+V této části desky se nacházejí H-můstky VNH2SP30 společně s regulátory napětí 7805CV-DG (výstup 5VDC) a LM3940IT-3.3 (výstup 3,3VDC). 
+Na verzi PPMB32-F je dále osazen AMS1117-3.3 pro napájení procesoru. 
+
+V dolní části desky se poté nacházejí dva integrované obvody VNH2SP30, z nichž jedno (VNH1) je určeno pro ovládání aktuátorů manipulujících s okny.
+VNH2 má několik režimů funkce, podle připojeného výstupu:
+\begin{itemize}
+    \item disabled (výstupy jsou deaktivovány)
+    \item pump (VNH je použito pro spínání čerpadla, případně stykače řídícího čerpadlo)
+    \item heating (VNH je použito pro řízení topné spirály)
+\end{itemize}
+
+Napájení desky je rozděleno do tří okruhů. První z kterého je napájena řídící elektronika je dále rozdělen na dva subokruhy s odlišným napětím (3,3~VDC a 5~VDC).
+Rozsah vstupního napětí pro tento okruh je 7,5~VDC až 18~VDC.
+Zbývající 2 okruhy jsou použity pro oddělené napájení jednotlivých výstupů. 
+Jejich napájecí rozsahy jsou rozepsány v tabulce níže.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llll}
+        \hline
+        \multicolumn{1}{|l|}{\textbf{Parametr}}           & \multicolumn{1}{l|}{\textbf{Min.}} & \multicolumn{1}{l|}{\textbf{Max.}} & \multicolumn{1}{l|}{\textbf{Jednotka}} \\ \hline
+        \multicolumn{1}{|l|}{Vstupní napětí}              & \multicolumn{1}{l|}{5,5}           & \multicolumn{1}{l|}{16}            & \multicolumn{1}{l|}{V}                 \\ \hline
+        \multicolumn{1}{|l|}{Výstupní napětí}             & \multicolumn{1}{c|}{-}             & \multicolumn{1}{l|}{16}            & \multicolumn{1}{l|}{V}                 \\ \hline
+        \multicolumn{1}{|l|}{Výstupní proud}              & \multicolumn{1}{c|}{-}             & \multicolumn{1}{l|}{30}            & \multicolumn{1}{l|}{A}                 \\ \hline
+        \multicolumn{1}{|l|}{Maximální kontinuální proud} & \multicolumn{1}{c|}{-}             & \multicolumn{1}{l|}{14}            & \multicolumn{1}{l|}{A}                 \\ \hline
+    \end{tabular}
+    \caption{Tabulka napájecích rozsahů napájecích větví VNH1 a VNH2}
+\end{table}
 
 \subsection{PPSB - Deska se senzory teploty a vlhkosti}
 Deska osazená senzory pro měření vzdušné teploty (DS18B20) a vlhkosti (BME280). 
+
+\paragraph{DS18B20}
 
 
 \section{Hardwarové verze ProtoPlantu a jejich odlišnosti}
