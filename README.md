@@ -14,5 +14,5 @@ This repository contains data for my SOČ thesis about greenhouse automation.
 ## Nákupy
 - Filament 
 - Výroba desek
-- 
+
 
