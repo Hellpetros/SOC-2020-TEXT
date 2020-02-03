@@ -16,7 +16,8 @@
 %%%%%% PŘÍKAZY
 \newcommand{\B}{\textbf} % tučné písmo
 \newcommand{\It}{\textit} % kurzíva
-
+\newcommand{\superscript}{\textsuperscript}
+\newcommand{\subscript}{\textsubscript}
 %%%%%% ROZMĚRY
 
 % posun textu kvůli kroužkové vazbě
