@@ -1,5 +1,5 @@
 \chapter{Hardware}
-CHPTR.
+V této kapitole se zaměřím na detailní popis hardwaru ProtoPlantu. 
 
 \section{Tištěné spoje}
 Všechny prototypy základních desek ProtoPlantu byly založeny na univerzálních tištěných spojích. Vzhledem k~tomu, že jsem po stránce vzhledu i funkčnosti nebyl s~takovýmto provedením spokojen, rozhodl jsem se nechat vyrobit vlastní tištěné spoje pro základní desku i senzorové moduly.
@@ -13,8 +13,8 @@ Z~důvodu přehlednosti jsem desku rozdělil do několika částí:
 \begin{itemize}
     \item Control (ESP32-WROOM32D a programátor)
     \item H-power (napájecí obvod a H-můstky)
-    \item Sin (SensorIN - piny pro připojení senzorů)
-    \item Pout (PowerOUT - výstup pro napájení dalších periferií)
+    \item SIN (SensorIN - piny pro připojení senzorů)
+    \item POUT (PowerOUT - výstup pro napájení dalších periferií)
     \item PanCon (PanelConnect - piny pro připojení tlačítek a displaye na ovládacím panelu)
 \end{itemize} 
 
@@ -75,11 +75,23 @@ Jejich napájecí rozsahy jsou rozepsány v~tabulce níže.
     \caption{Tabulka napájecích rozsahů napájecích větví VNH1 a VNH2}
 \end{table}
 
+\paragraph{Sekce SIN}
+Sekce s piny pro připojení jednotlivých senzorů. 
+S výjimkou ochranných rezistorů je složena pouze z pinheadů.
+Jednotlivé piny jsou pro lepší přehlednost označeny přímo na desce a podrobněji popsány v jejím datasheetu. 
+
+\paragraph{Sekce POUT}
+
+
+\paragraph{Sekce PanCon}
+Dvanácti-pinový konektor PanCon slouží pro připojení kabelu od hlavního řídícího panelu. 
+Samotný konektor má dva zemnící vývody, dva napájecí (1~x~5~V~a~1~x~3,3~V), dva vývody sběrnice I\textsuperscript{2}C a 6 vývodů pro připojení tlačítek a přepínačů.
+Přesnější zapojení je opět k dispozici v datasheetech jednotlivých desek.
+
 \subsection{PPSB - Deska se senzory teploty a vlhkosti}
 Deska osazená senzory pro měření vzdušné teploty (DS18B20) a vlhkosti (BME280). 
 
 \paragraph{DS18B20}
-
 
 \section{Hardwarové verze ProtoPlantu a jejich odlišnosti}
 
