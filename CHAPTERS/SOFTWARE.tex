@@ -29,13 +29,29 @@ ProtoPlant primárně využívá dvě datové sběrnice:
 \end{itemize}
 
 \paragraph{Sběrnice I\superscript{2}C}
+Tuto sběrnici používá ProtoPlant pro komunikaci se zařízeními na stejné desce, případně pro řízení LCD displeje instalovaného na řídícím panelu (připojení přes PanCon). 
+
+\subparagraph{Princip}
+Na sběrnici je připojeno jedno zařízení jakožto master (řídící) a jedno, či více zařízení jako slave (řízená).
+Tato zařízení jsou navzájem propojena dvěma dráty (proto se I\superscript{2}C někdy přezdívá TwoWire), serial clock (SCL) a serial data (SDA).
+Každé ze slave zařízení má sedmibitovou adresu (např. 0xE0), která musí být pro každé zařízení na jedné sběrnici odlišná.
+Některá zařízení mají tuto adresu pevně zapsanou a nelze ji měnit, zatímco u jiných ji lze změnit.
+Zařízení připojené jako v režimu master tuto adresu nepotřebuje, vzhledem k tomu, že on sám vždy adresuje jen jedno ze zařízení.
+
+\subparagraph{Komunikační protokol}
+Za klidového stavu (neprobíhá žádná komunikace) jsou obě linky (SDA i SCL) připojeny nastaveny na HIGH.
+Jakmile chce master zahájit komunikaci, vyšle takzvaný startovní signál, po kterém následuje adresa daného zařízení, jejíž nultý bit určí, zda chce master číst, nebo zapisovat.
+Dále následují datové bity.
+Jakmile jsou všechna data přenesena, vyšle master stop signál, čímž ukončí komunikaci a sběrnice se vrátí do klidu.
+Rychlost celého přenosu určuje pulsování linky CLK.
+
+
 
 \paragraph{Sběrnice OneWire}
 
 \section{Komunikace mezi jednotlivými moduly}
 
 \section{Bezdrátová komunikace}
-
 
 \chapter{Software dalších modulů}
 \label{chap:moduleSoftware}

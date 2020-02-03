@@ -5,7 +5,16 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 
+\usepackage{color} % balíček pro obarvování textů
+\usepackage{xcolor}  % zapne možnost používání barev, mj. pro \definecolor
+\definecolor{mygreen}{RGB}{0,150,0} % nastavení barev odkazů 
+\usepackage{listings} % balíček pro formátování zdrojových kódů 
+\usepackage[author=,status=draft]{fixme} % vkládání poznámek  
+% dva módy (status): draft (poznámky se zobrazují v PDF) / final (poznámky se nezobrazují v PDF)
+\usepackage{multirow}
+
 \addbibresource{text.bib}
+\nocite{*}
 
 \titlecz{Automatický skleník podruhé}
 \titleen{Automatic greenhouse second time}
