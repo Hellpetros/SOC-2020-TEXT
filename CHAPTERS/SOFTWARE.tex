@@ -44,8 +44,14 @@ Jakmile chce master zahájit komunikaci, vyšle takzvaný startovní signál, po
 Dále následují datové bity.
 Jakmile jsou všechna data přenesena, vyšle master stop signál, čímž ukončí komunikaci a sběrnice se vrátí do klidu.
 Rychlost celého přenosu určuje pulsování linky CLK.
+Celý proces názorně zobrazuje 
 
-
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=\textwidth]{img/pulp.jpg}
+   \caption{Nejste v~tom sami.}
+   \label{fig:I2C-protocol}
+\end{figure}
 
 \paragraph{Sběrnice OneWire}
 
