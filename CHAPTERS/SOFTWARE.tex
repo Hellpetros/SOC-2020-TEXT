@@ -3,14 +3,14 @@ Tato kapitola se zaměřuje na software základní desky ProtoPlantu a detailně
 Na software ostatních modulů se zaměřuje následující kapitola \ref{chap:moduleSoftware}.
 
 \paragraph{Blokové schéma funkce softwaru základní desky}
-Schéma funkce softwaru základní desky je shrnuto blokovým diagramem XXX
+Schéma funkce softwaru základní desky je shrnuto blokovým diagramem XXX.
 
 \section{Sdílené knihovny}
 Z~důvodu usnadnění programování základní desky i ostatních rozšiřujících modulů jsem vytvořil několik sdílených knihoven. 
 V~nich je zahrnuto:
 \begin{itemize}
     \item konfigurace systému
-    \item nastavení jednotlivých pinů dle standartního rozložení, vč. možnosti nastavení vlastního
+    \item nastavení jednotlivých pinů dle standardního rozložení, vč. možnosti nastavení vlastního
     \item práce s~displayem
     \item práce s~tlačítky
     \item řízení H-můstků
@@ -19,7 +19,9 @@ V~nich je zahrnuto:
 Díky těmto knihovnám je většina zdrojového kódu uložena v~nich. 
 Koncový uživatel, který se rozhodne software modifikovat, poté pouze v~hlavním programu definuje, které moduly spustit a do konfiguračního souboru zapíše nastavení daných modulů.
 
+
 \paragraph{Konfigurace softwaru}
+Celý software 
 
 \section{Datové sběrnice}
 ProtoPlant primárně využívá dvě datové sběrnice:
@@ -54,6 +56,7 @@ Celý proces názorně zobrazuje obrázek \ref{fig:I2C-protocol}.
 \end{figure}
 
 \paragraph{Sběrnice OneWire}
+Sběrnici OneWire používá ProtoPlant pro komunikaci s teplotními čidly DS18B20. 
 
 \section{Komunikace mezi jednotlivými moduly}
 
