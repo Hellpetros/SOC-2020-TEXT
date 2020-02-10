@@ -34,7 +34,10 @@
 %\captionsetup[listedequation]{labelformat = parens}
 
 %% hyperref \autoref nazvy
-\def\sectionautorefname{Kapitola}
+\def\chapterautorefname{Kapitola}
+\def\sectionautorefname{Oddíl}
+\def\subsectionautorefname{Pododdíl}
+\def\paragraphautorefname{Odstavec}
 \def\figureautorefname{Obrázek}
 \def\tableautorefname{Tabulka}
 
