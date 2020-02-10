@@ -16,6 +16,7 @@ Z~důvodu přehlednosti jsem desku rozdělil do několika částí:
     \item SIN (SensorIN - piny pro připojení senzorů)
     \item POUT (PowerOUT - výstup pro napájení dalších periferií)
     \item PanCon (PanelConnect - piny pro připojení tlačítek a displeje na ovládacím panelu)
+    \item SelfProt (SelfProtection - senzor teploty a piny pro připojení vnitřního detektoru vody)
 \end{itemize} 
 
 Samotná základní deska má dvě verze. Jejich rozdíly jsou vysvětleny níže.
@@ -27,6 +28,10 @@ Obě verze desky jsou kromě sekce Control osazeny stejným hardwarem, tedy:
     \item pinheady pro připojení senzorů, ovládacího panelu a dalších periferií
     \item svorkovnicemi pro připojení napájecích kabelů a silových výstupů
 \end{itemize}
+
+Kromě dalších součástek je přímo na desce osazen senzor DS18B20 chránící desku před přehřátím. 
+Pokud teplota základní desky překročí 50~\degree C, automaticky se přeruší veškeré operace a systém přejde do nouzového režimu (viz. kapitola \ref{paragraph:nouzovyRezim}).
+
 
 \paragraph{PPMB32-F}
 Kompletní, samostatná deska. 
@@ -97,7 +102,7 @@ Piny jsou rozděleny na části připojené k~subokruhům A1 a A2 s~napětím 3,
 \paragraph{Sekce PanCon}
 Dvanácti-pinový konektor PanCon slouží pro připojení kabelu od hlavního řídícího panelu. 
 Samotný konektor má dva zemnící vývody, dva napájecí (1~x~5~V~a~1~x~3,3~V), dva vývody sběrnice I\textsuperscript{2}C a 6 vývodů pro připojení tlačítek a přepínačů.
-Přesnější zapojení je opět k~dispozici v~datasheetech jednotlivých desek.
+Přesnější zapojení je opět k~dispozici v~datasheetech jednotlivých desek.c
 
 \subsection{PPSB - Deska se senzory teploty a vlhkosti}
 Deska osazená senzory pro měření vzdušné teploty (DS18B20) a vlhkosti (BME280). 
@@ -119,10 +124,7 @@ Deska osazená senzory pro měření vzdušné teploty (DS18B20) a vlhkosti (BME
 \subsection{Těsnění}
 
 
-\subsection{Ochrana elektroniky před vlhkostí}
-
-
-\subsection{Ochrana před přehřátím}
+\subsection{Ochrana elektroniky před přehřátím a vlhkostí}
 
 
 \newpage
