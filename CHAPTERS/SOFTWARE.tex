@@ -19,7 +19,6 @@ V~nich je zahrnuto:
 Díky těmto knihovnám je většina zdrojového kódu uložena v~nich. 
 Koncový uživatel, který se rozhodne software modifikovat, poté pouze v~hlavním programu definuje, které moduly spustit a do konfiguračního souboru zapíše nastavení daných modulů.
 
-
 \paragraph{Konfigurace softwaru}
 Celý software 
 
@@ -37,7 +36,7 @@ Tuto sběrnici používá ProtoPlant pro komunikaci se zařízeními na stejné 
 Na sběrnici je připojeno jedno zařízení jakožto master (řídící) a jedno, či více zařízení jako slave (řízená).
 Tato zařízení jsou navzájem propojena dvěma dráty (proto se I\superscript{2}C někdy přezdívá TwoWire), serial clock (SCL) a serial data (SDA).
 Každé ze slave zařízení má sedmibitovou adresu (např. 0xE0), která musí být pro každé zařízení na jedné sběrnici odlišná.
-Některá zařízení mají tuto adresu pevně zapsanou a nelze ji měnit, zatímco u~jiných ji lze změnit.
+Některá zařízení mají tuto adresu pesvně zapsanou a nelze ji měnit, zatímco u~jiných ji lze změnit.
 Zařízení připojené jako v~režimu master tuto adresu nepotřebuje, vzhledem k~tomu, že on sám vždy adresuje jen jedno ze zařízení.
 
 \subparagraph{Komunikační protokol}
