@@ -1,5 +1,36 @@
 \chapter{Průběh vývoje ProtoPlantu}
+Za dobu vývoje ProtoPlant prošel můj systém spoustou velkých změn.
+Vývoj byl započat začátkem roku 2018.
+Za tu dobu vyšlo již několik verzí softwaru i hardwaru.
 
+\section{ProtoPlant x1.0 až x4.0 (tzv. legacy verze)}
+Původní verze ProtoPlantu byly celkem 4 stabilní a několik vývojových.
+Tyto 4 stabilní verze jsou ve zkratce popsány níže.
+
+\subsection{Verze x1.0}
+Nejstarší funkční verze ProtoPlantu, založená na Arduinu DUE. 
+Tato verze byla pouze shluk kabelů, přes které byly k Arduinu připojeny jednotlivé moduly senzorů.
+Byla schopna pouze měřit teplotu a s pomocí relátek ovládat aktuátory, které následně otevíraly, nebo zavíraly okna.
+Inverze polarity napájení byla řešena použitím třech relé.
+Dvou, která křížově spínala kladný pól napájení aktuátorů a třetího, který připojoval zemnící vodič.
+Toto zapojení nebylo zcela ideální, vzhledem k nutnosti použití tří relé a tedy i velkému úbytku napětí.
+Použité Arduino bohužel další vývoj nepřežilo.
+
+\subsection{Verze x2.0}
+Největší změnou oproti předchozí verzi byl přechod od Arduina na ESP32 devkitC.
+Software byl kompletně přepsán a některé funkce byly přesunuty
+
+\paragraph{Po hardwarové stránce}
+bylo vytvořeno mnoho prototypů řídící elektroniky.
+Nejstarší z nich tvořilo několik modulů s čidly teploty a relátkem připojených drátky k ESP32 devkitu C.
+Později jsem začal přecházet na univerzální tištěné spoje, kterých na výrobu prototypů padlo přibližně 20 desek.
+Díky těmto prototypům jsem získal zkušenosti s prací s ESP32 a mohl dále pokračovat ve vývoji mého systému.
+
+\paragraph{Software původní verze ProtoPlantu}
+byl založen na jednom vlákně postupně volající funkce různých knihoven (ať již mnou vytvořených, či převzatých).
+Tento postup se příliš neosvědčil, vzhledem k tomu, že nebylo možné zajistit přesné časování spuštění jednotlivých funkcí.
+
+\section{}
 
 
 \newpage
