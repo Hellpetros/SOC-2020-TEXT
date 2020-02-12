@@ -29,8 +29,8 @@ ProtoPlant primárně využívá dvě datové sběrnice:
     \item OneWire
 \end{itemize}
 
-\paragraph{Sběrnice I\superscript{2}C}
-Tuto sběrnici používá ProtoPlant pro komunikaci se zařízeními na stejné desce, případně pro řízení LCD displeje instalovaného na řídícím panelu (připojení přes PanCon). 
+\paragraph{Sběrnici I\superscript{2}C}
+používá ProtoPlant pro komunikaci se zařízeními na stejné desce, případně pro řízení LCD displeje instalovaného na řídícím panelu (připojení přes PanCon). 
 
 \subparagraph{Princip}
 Na sběrnici je připojeno jedno zařízení jakožto master (řídící) a jedno, či více zařízení jako slave (řízená).
@@ -57,9 +57,18 @@ Celý proces názorně zobrazuje obrázek \ref{fig:I2C-protocol}.
 \paragraph{Sběrnice OneWire}
 Sběrnici OneWire používá ProtoPlant pro komunikaci s~teplotními čidly DS18B20. 
 
-\section{Komunikace mezi jednotlivými moduly}
+\section{Komunikace mezi řídící jednotkou a jednotlivými moduly}
+ProtoPlant podporuje dva režimy komunikace řídící jednotky s přídavnými moduly:
+\begin{itemize}
+    \item bezdrátová komunikace přes Wi-Fi
+    \item kabelová komunikace přes UART (standart RS-485)
+\end{itemize}
 
 \section{Bezdrátová komunikace}
+
+
+\section{Kabelová komunikace a RS-485}
+
 
 \chapter{Software dalších modulů}
 \label{chap:moduleSoftware}
