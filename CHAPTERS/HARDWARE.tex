@@ -65,6 +65,7 @@ V~dolní části desky se poté nacházejí dva integrované obvody VNH2SP30, z~
 Napájení desky je rozděleno do tří okruhů. 
 
 \paragraph{Okruh A}
+\label{par:PowerCircuitA}
 Tento okruh je určen pro napájení řídící elektroniky.
 Má celkově 3 části, oddělené s~pomocí stabilizátorů napětí.
 Jejich propojení znázorňuje schéma .
@@ -129,15 +130,48 @@ Kromě samotné řídící elektroniky je možno ProtoPlant rozšířit i o př�
 Těchto modulů existuje hned několik:
 
 \begin{itemize}
-    \item MCI (Module Communication Interface - modul potřebný pro drátové připojení ostatních modulů - viz. \autoref{subsec:MCI})
+    \item CPIM (Module Communication and Power Interface - modul potřebný pro drátové připojení ostatních modulů - viz. \autoref{subsec:CPIM})
+    \item PSpl (Power Splitter - rozdělovač napájení)
     \item SHSM (Soil Humidity Sensorics Module - modul vybavený senzory pro měření vlhkosti půdy - viz. \autoref{subsec:SHSM})
     \item SEM (Sensorics Expansion Module - modul pro zvýšení počtu senzorů připojených k ProtoPlantu - viz. \autoref{subsec:SEM})
     \item PCM (Pump Control Module - modul pro sledování hladiny vody v nádrži a ovládání čerpadla - viz. \autoref{subsec:PCM})
     \item RCM (Remote Control Module - modul pro připojení vzdáleného ovládacího panelu - viz. \autoref{subsec:RCM})
 \end{itemize}
 
-\subsection{MCI - Module Communication Interface}
-\label{subsec:MCI}
+\paragraph{Napájení přídavných modulů}
+je prováděno ve čtyřech režimech.
+\begin{itemize}
+    \item napájení přímo z řídící jednotky
+    \item napájení z externího zdroje přes CPIM
+    \item napájení přes PSpl
+    \item napájení každého modulu odděleně
+\end{itemize}
+
+\subparagraph{Napájení přimo z řídící jednotky}
+je možno použít pouze tehdy, když je připojen maximálně jeden modul a to z důvodu, aby bylo zabráněno podpětí celého systému.
+Modul je takto připojen přímo k napájecímu okruhu A řídící jednotky (viz. \autoref{par:PowerCircuitA}).
+
+\subparagraph{Použití externího zdroje připojeného k CPIM}
+je použitelné v případě, kdy uživatel upřednostňuje kabelovou komunikaci mezi moduly a řídící jednotkou.
+Při napájení v tomto režimu je počet připojitelných modulů omezen pouze výkonem zdroje napájení připojeného k CPIM.
+Na vstupní napájecí svorkovnici je připojen externí zdroj. 
+Kromě dvou kabelů pro komunikaci jsou na výstupu připojeny i napájecí kabely od jednotlivých modulů.
+
+\subparagraph{Napájení přes PSpl}
+funguje na velmi podobném principu, jako předchozí varianta. 
+K PSpl je na vstupní svorkovnici připojen externí zdroj napájení.
+Na výstupních svorkovnicích jsou připojeny napájecí kabely jednotlivých modulů.
+Tato metoda je určena primárně pro bezdrátovou komunikaci mezi řídící jednotkou a moduly.
+
+\subparagraph{Napájení každého modulu odděleně}
+je nejjednodušší metoda napájení.
+Každý z modulů je připojen vlastním kabelem přímo k napájecímu zdroji.
+Primárně je určena pro bezdrátovou komunikaci mezi jednotlivými moduly. 
+
+\subsection{CPIM - Module Communication and Power Interface}
+\label{subsec:CPIM}
+Tento modul funguje jako propojovací uzel mezi řídící jednotkou a všemi přídavnými moduly.
+Dále slouží pro připojení externího napájení
 
 \subsection{SHSM - Soil Humidity Sensorics Module}
 \label{subsec:SHSM}
