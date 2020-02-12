@@ -32,7 +32,6 @@ Obě verze desky jsou kromě sekce Control osazeny stejným hardwarem, tedy:
 Kromě dalších součástek je přímo na desce osazen senzor DS18B20 chránící desku před přehřátím. 
 Pokud teplota základní desky překročí 50~\degree C, automaticky se přeruší veškeré operace a systém přejde do nouzového režimu (viz. kapitola \ref{paragraph:nouzovyRezim}).
 
-
 \paragraph{PPMB32-F}
 Kompletní, samostatná deska. 
 Je přímo osazena procesorem ESP32-WROOM32D i programátorem CP2102N. 
@@ -127,6 +126,7 @@ Dále ProtoPlant podporuje připojení senzorů vlhkosti půdy pracujících na 
 
 \section{Přídavné moduly ProtoPlantu}
 Kromě samotné řídící elektroniky je možno ProtoPlant rozšířit i o přídavné moduly. 
+Na vývoji těchto modulů se zatím stále pracuje.
 Těchto modulů existuje hned několik:
 
 \begin{itemize}
@@ -152,6 +152,7 @@ je možno použít pouze tehdy, když je připojen maximálně jeden modul a to 
 Modul je takto připojen přímo k napájecímu okruhu A řídící jednotky (viz. \autoref{par:PowerCircuitA}).
 
 \subparagraph{Použití externího zdroje připojeného k CPIM}
+\label{subpar:suplyingViaCPIM}
 je použitelné v případě, kdy uživatel upřednostňuje kabelovou komunikaci mezi moduly a řídící jednotkou.
 Při napájení v tomto režimu je počet připojitelných modulů omezen pouze výkonem zdroje napájení připojeného k CPIM.
 Na vstupní napájecí svorkovnici je připojen externí zdroj. 
@@ -171,19 +172,30 @@ Primárně je určena pro bezdrátovou komunikaci mezi jednotlivými moduly.
 \subsection{CPIM - Module Communication and Power Interface}
 \label{subsec:CPIM}
 Tento modul funguje jako propojovací uzel mezi řídící jednotkou a všemi přídavnými moduly.
-Dále slouží pro připojení externího napájení
+Dále slouží pro připojení externího napájení pro jednotlivé další moduly (viz. \autoref{subpar:suplyingViaCPIM}).
 
 \subsection{SHSM - Soil Humidity Sensorics Module}
 \label{subsec:SHSM}
+Modul určený pro připojení senzorů měřících vlhkost půdy.
+Tento modul je zatím stále ve stádiu konceptu.
 
 \subsection{SEM - Sensorics Expansion Module}
 \label{subsec:SEM}
+Modul určený pro zvýšení pokrytí prostoru skleníku přidáním dalších enviromentálních senzorů.
+Pro malé, případně středně velké skleníky není tento modul potřebný. 
+Ve velkých sklenících již své uplatnění najde, vzhledem k tomu, že je vybaven vlastní řídící elektronikou a jediným omezením je dosah zvoleného způsobu komunikace s řídící jednotkou.
 
 \subsection{PCM - Pump Control Module}
 \label{subsec:PCM}
+Valná většina zahrádkářů má pro svůj skleník i nádrž na vodu.
+Tento modul je určen pro sledování hladiny vody v ní a případné spínání čerpadla, které má za úkol v nádrži vodu doplňovat.
 
 \subsection{RCM - Remote Control Module}
 \label{subsec:RCM}
+Byl vytvořen pro zjednodušení nastavení a ovládání ProtoPlantu.
+Skládá se ze dvou částí. 
+Komunikační části, kterou lze připojit k základní desce ProtoPlantu a ovládacího panelu. 
+Uživatel ovládací panel nainstaluje na zeď přímo v domě a může díky němu vzdáleně ovládat celý ProtoPlant přímo z pohodlí domova. 
 
 \section{Krabice pro řídící elektroniku a jejich interiér}
 
