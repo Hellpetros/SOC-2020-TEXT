@@ -9,6 +9,8 @@ Tyto 4 stabilní verze jsou ve zkratce popsány níže.
 
 \subsection{Verze x1.0}
 Nejstarší funkční verze ProtoPlantu, založená na Arduinu DUE. 
+Jeho software tvořilo jedno, stále se opakující vlákno.
+Nevýhodou tohoto postupu bylo nepřesné časování některých úkonů způsobeném používáním blokujících operací.
 Tato verze byla pouze shluk kabelů, přes které byly k Arduinu připojeny jednotlivé moduly senzorů.
 Byla schopna pouze měřit teplotu a s pomocí relátek ovládat aktuátory, které následně otevíraly, nebo zavíraly okna.
 Inverze polarity napájení byla řešena použitím třech relé.
@@ -18,19 +20,35 @@ Použité Arduino bohužel další vývoj nepřežilo.
 
 \subsection{Verze x2.0}
 Největší změnou oproti předchozí verzi byl přechod od Arduina na ESP32 devkitC.
-Software byl kompletně přepsán a některé funkce byly přesunuty
+Software byl kompletně přepsán a blokující funkce odstraněny.
+Díky tomu běžel software mnohem plynuleji.
+Co se týče hardwaru, tato verze již používala první prototyp základní desky, který byl osazen na univerzálním tištěném spoji.
+Zároveň jsem přidal podporu LCD znakového displaye, na který se vypisovaly naměřené hodnoty ze senzorů a různé stavové hlášky.
+Během vývoje této verze jsem také systém začal nazývat ProtoPlant.
 
-\paragraph{Po hardwarové stránce}
-bylo vytvořeno mnoho prototypů řídící elektroniky.
-Nejstarší z nich tvořilo několik modulů s čidly teploty a relátkem připojených drátky k ESP32 devkitu C.
-Později jsem začal přecházet na univerzální tištěné spoje, kterých na výrobu prototypů padlo přibližně 20 desek.
-Díky těmto prototypům jsem získal zkušenosti s prací s ESP32 a mohl dále pokračovat ve vývoji mého systému.
+\subsection{Verze x3.0 a další}
+Tato verze byla v minulém roce prezentována na okresním kole SOČ.
+Kromě několika prototypů základní desky, které se při jejím vývoji vystřídaly došlo i k mnohým změnám ve funkci celého ProtoPlantu.
+Doposud používaná relé, kterými ProtoPlant spínal aktuátory bylo nutno nahradit jiným řešením.
+Důvodem k tomu byl jejich příliš velký úbytek napětí, který způsoboval podpětí celé řídící elektroniky.
+Hledal jsem tedy způsob, jak vyřešit spínání aktuátorů tak, aby byl napěťový úbytek co nejmenší.
+Nakonec jsem objevil H-můstky VNH2SP30. 
+Ty umožňují kromě regulace výstupního napětí velmi jednoduše obracet polaritu výstupů.
+Pro zjednodušení zapojení při testování jsem využíval Monster Moto Shield, na kterém jsou tato VNH osazena hned dvě.
+Proto mne napadlo využít druhé VNH jako víceúčelový výstup, ke kterému lze připojit čerpadlo, elektromagnetický ventil, případně jiná zařízení.
+V softwaru přibyla podpora tlačítek a menu zobrazované na LCD displeji, přes které se dalo měnit nastavení systému za chodu.
+Dále jsem ProtoPlant uzavřel do průmyslového elektroinstalačního boxu s krytím IP67.
+Do víka boxu jsem nainstaloval LCD displej a ovládací tlačítka.
 
-\paragraph{Software původní verze ProtoPlantu}
-byl založen na jednom vlákně postupně volající funkce různých knihoven (ať již mnou vytvořených, či převzatých).
-Tento postup se příliš neosvědčil, vzhledem k tomu, že nebylo možné zajistit přesné časování spuštění jednotlivých funkcí.
+\paragraph{Verze x3.1}
+byla další ze stabilních verzí zaměřená primárně na opravu softwarových chyb.
+Tuto verzi jsem v minulém roce prezentoval v krajském kole SOČ.
+Menu nastavení bylo přeloženo do češtiny.
 
-\section{}
+\paragraph{Verze x3.2}
+byla verzí prezentovanou na loňské celostátní přehlídce.
+
+\section{ProtoPlant verze 5.0}
 
 
 \newpage
