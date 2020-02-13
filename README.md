@@ -5,6 +5,38 @@ This repository contains data for my SOČ thesis about greenhouse automation.
 ## NOTES
 - S tátou jsem domluvil vyfakturování nákupů z číny a výroby desek přes naši firmu. Možno vystavit fakturu i na leden.
 
+## WHAT'S MISSING?
+- UVOD
+- ZAVER
+
+### IN HARDWARE chptr.
+- DS18B20 subsec.
+- BME280 subsec.
+- DHT22 subsec.
+- Krabice pro ridici elektroniku a jejich interier section
+- Instalace elektroniky do krabic - tzv. StoryMount subsec.
+- Tesneni subsec.
+- Ochrana elektroniky pred prehratim a vlhkosti subsec.
+
+### KONKURENCE chptr.
+- WHOLE chptr.
+
+### POPIS FUNKCI chptr.
+- WHOLE chptr.
+
+### SOFTWARE chptr.
+- Konfigurace softwaru paragraph
+- Sběrnice OneWire paragraph
+- Bezdrátová komunikace sec.
+- Kabelová komunikace a RS-485 sec.
+- Software dalších modulů (sub)chptr.
+- Zvláštní stavy (sub)chptr.
+- Nouzový režim paragraph
+
+### VYVOJ chptr.
+- Finish -> paragraph Verze x3.2
+- ProtoPlant verze 5.0 sec.
+
 ## TODO list
 
 - Dodělat podklady k deskám. - URGENT
