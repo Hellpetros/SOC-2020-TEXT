@@ -1,5 +1,6 @@
 \chapter{Jednotlivé moduly ProtoPlantu}
-
+ProtoPlant je modulární systém - není tedy jedním velkým celkem, se všemi funkcemi přímo zaintegrovanými.
+V této kapitole se zaměřím na podrobný popis jednotlivých modulů.
 
 \section{PPCU - ProtoPlant Control Unit}
 PPCU, neboli řídící jednotka je hlavním modulem celého systému.
@@ -92,7 +93,7 @@ To be done.
 Všechny prototypy základních desek ProtoPlantu byly založeny na univerzálních tištěných spojích. Vzhledem k~tomu, že jsem po stránce vzhledu i funkčnosti nebyl s~takovýmto provedením spokojen, rozhodl jsem se nechat vyrobit vlastní tištěné spoje pro základní desku i senzorové moduly.
 Díky tomuto jsem se naučil návrhu tištěných spojů a tvorbě výrobních podkladů v~programu Autodesk EAGLE.
 
-\subsection{PPMB32 -- Základní deska}
+\section{PPMB32 -- Základní deska}
 \label{subsec:motherBoard}
 Základní deska je rozdělena do několika částí. 
 Vzhledem k~tomu, že umím pájet velmi dobře, rozhodl jsem se pro ruční osazení všech součástek, které byly doposud osazeny pouze na různých modulech připojených k~základní desce, včetně procesoru ESP32-WROOM32D.
@@ -195,7 +196,7 @@ Přesnější zapojení je opět k~dispozici v~datasheetech jednotlivých desek.
 \section{Ochrana elektroniky před přehřátím a vlhkostí}
 To be done.
 
-\subsection{PPSB - Deska se senzory teploty a vlhkosti}
+\section{PPSB - Deska se senzory teploty a vlhkosti}
 Deska osazená senzory pro měření teploty DS18B20 (viz. \autoref{sec:DS18B20}) a vlhkosti BME280 (viz. \autoref{sec:BME280}). 
 
 \section{Senzorika}
