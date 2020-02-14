@@ -1,11 +1,99 @@
-\chapter{Hardware}
-V~této kapitole se zaměřím na detailní popis hardwaru ProtoPlantu. 
+\chapter{Jednotlivé moduly ProtoPlantu}
 
-\section{Tištěné spoje}
+
+\section{PPCU - ProtoPlant Control Unit}
+PPCU, neboli řídící jednotka je hlavním modulem celého systému.
+Samotné PPCU tvoří elektroinstalační box s krytím IP65.
+Na přední části se nachází ovládací panel s LCD displejem a ovládacími tlačítky.
+Z bočních stran jsou instalovány vodotěsné průchodky pro provlečení kabelů.
+
+Uvnitř se nachází základní deska (viz. \autoref{subsec:motherBoard}) a zdroj napájení.
+
+\section{Přídavné moduly ProtoPlantu}
+Kromě samotné řídící elektroniky je možno ProtoPlant rozšířit i o přídavné moduly. 
+Na vývoji těchto modulů se zatím stále pracuje.
+Těchto modulů existuje hned několik:
+
+\begin{itemize}
+    \item CIPM (Communication Interface and Power Module  - modul potřebný pro drátové připojení ostatních modulů - viz. \autoref{subsec:CIPM})
+    \item PSpl (Power Splitter - rozdělovač napájení)
+    \item SHSM (Soil Humidity Sensorics Module - modul vybavený senzory pro měření vlhkosti půdy - viz. \autoref{subsec:SHSM})
+    \item SEM (Sensorics Expansion Module - modul pro zvýšení počtu senzorů připojených k ProtoPlantu - viz. \autoref{subsec:SEM})
+    \item PCM (Pump Control Module - modul pro sledování hladiny vody v nádrži a ovládání čerpadla - viz. \autoref{subsec:PCM})
+    \item RCM (Remote Control Module - modul pro připojení vzdáleného ovládacího panelu - viz. \autoref{subsec:RCM})
+\end{itemize}
+
+\paragraph{Napájení přídavných modulů}
+je prováděno ve čtyřech režimech.
+\begin{itemize}
+    \item napájení přímo z řídící jednotky
+    \item napájení z externího zdroje přes CIPM
+    \item napájení přes PSpl
+    \item napájení každého modulu odděleně
+\end{itemize}
+
+\subparagraph{Napájení přimo z řídící jednotky}
+je možno použít pouze tehdy, když je připojen maximálně jeden modul a to z důvodu, aby bylo zabráněno podpětí celého systému.
+Modul je takto připojen přímo k napájecímu okruhu A řídící jednotky (viz. \autoref{par:PowerCircuitA}).
+
+\subparagraph{Použití externího zdroje připojeného k CIPM}
+\label{subpar:suplyingViaCIPM}
+je použitelné v případě, kdy uživatel upřednostňuje kabelovou komunikaci mezi moduly a řídící jednotkou.
+Při napájení v tomto režimu je počet připojitelných modulů omezen pouze výkonem zdroje napájení připojeného k CIPM.
+Na vstupní napájecí svorkovnici je připojen externí zdroj. 
+Kromě dvou kabelů pro komunikaci jsou na výstupu připojeny i napájecí kabely od jednotlivých modulů.
+
+\subparagraph{Napájení přes PSpl}
+funguje na velmi podobném principu, jako předchozí varianta. 
+K PSpl je na vstupní svorkovnici připojen externí zdroj napájení.
+Na výstupních svorkovnicích jsou připojeny napájecí kabely jednotlivých modulů.
+Tato metoda je určena primárně pro bezdrátovou komunikaci mezi řídící jednotkou a moduly.
+
+\subparagraph{Napájení každého modulu odděleně}
+je nejjednodušší metoda napájení.
+Každý z modulů je připojen vlastním kabelem přímo k napájecímu zdroji.
+Primárně je určena pro bezdrátovou komunikaci mezi jednotlivými moduly. 
+
+\subsection{CIPM - Module Communication and Power Interface}
+\label{subsec:CIPM}
+Tento modul funguje jako propojovací uzel mezi řídící jednotkou a všemi přídavnými moduly.
+Dále slouží pro připojení externího napájení pro jednotlivé další moduly (viz. \autoref{subpar:suplyingViaCIPM}).
+
+\subsection{SHSM - Soil Humidity Sensorics Module}
+\label{subsec:SHSM}
+Modul určený pro připojení senzorů měřících vlhkost půdy.
+Tento modul je zatím stále ve stádiu konceptu.
+
+\subsection{SEM - Sensorics Expansion Module}
+\label{subsec:SEM}
+Modul určený pro zvýšení pokrytí prostoru skleníku přidáním dalších enviromentálních senzorů.
+Pro malé, případně středně velké skleníky není tento modul potřebný. 
+Ve velkých sklenících již své uplatnění najde, vzhledem k tomu, že je vybaven vlastní řídící elektronikou a jediným omezením je dosah zvoleného způsobu komunikace s řídící jednotkou.
+
+\subsection{PCM - Pump Control Module}
+\label{subsec:PCM}
+Valná většina zahrádkářů má pro svůj skleník i nádrž na vodu.
+Tento modul je určen pro sledování hladiny vody v ní a případné spínání čerpadla, které má za úkol v nádrži vodu doplňovat.
+
+\subsection{RCM - Remote Control Module}
+\label{subsec:RCM}
+Byl vytvořen pro zjednodušení nastavení a ovládání ProtoPlantu.
+Skládá se ze dvou částí. 
+Komunikační části, kterou lze připojit k základní desce ProtoPlantu a ovládacího panelu. 
+Uživatel ovládací panel nainstaluje na zeď přímo v domě a může díky němu vzdáleně ovládat celý ProtoPlant přímo z pohodlí domova. 
+
+\subsection{Instalace elektroniky do krabic - tzv. StoryMount}
+To be done.
+
+\subsection{Těsnění}
+To be done.
+
+\chapter{Tištěné spoje}
 Všechny prototypy základních desek ProtoPlantu byly založeny na univerzálních tištěných spojích. Vzhledem k~tomu, že jsem po stránce vzhledu i funkčnosti nebyl s~takovýmto provedením spokojen, rozhodl jsem se nechat vyrobit vlastní tištěné spoje pro základní desku i senzorové moduly.
 Díky tomuto jsem se naučil návrhu tištěných spojů a tvorbě výrobních podkladů v~programu Autodesk EAGLE.
 
 \subsection{PPMB32 -- Základní deska}
+\label{subsec:motherBoard}
 Základní deska je rozdělena do několika částí. 
 Vzhledem k~tomu, že umím pájet velmi dobře, rozhodl jsem se pro ruční osazení všech součástek, které byly doposud osazeny pouze na různých modulech připojených k~základní desce, včetně procesoru ESP32-WROOM32D.
 Z~důvodu přehlednosti jsem desku rozdělil do několika částí:
@@ -104,6 +192,9 @@ Dvanácti-pinový konektor PanCon slouží pro připojení kabelu od hlavního �
 Samotný konektor má dva zemnící vývody, dva napájecí (1~x~5~V~a~1~x~3,3~V), dva vývody sběrnice I\textsuperscript{2}C a 6 vývodů pro připojení tlačítek a přepínačů.
 Přesnější zapojení je opět k~dispozici v~datasheetech jednotlivých desek.
 
+\section{Ochrana elektroniky před přehřátím a vlhkostí}
+To be done.
+
 \subsection{PPSB - Deska se senzory teploty a vlhkosti}
 Deska osazená senzory pro měření teploty DS18B20 (viz. \autoref{sec:DS18B20}) a vlhkosti BME280 (viz. \autoref{sec:BME280}). 
 
@@ -122,91 +213,6 @@ To be done.
 
 \subsection{DHT22}
 \label{sec:DHT22}
-To be done.
-
-\section{Přídavné moduly ProtoPlantu}
-Kromě samotné řídící elektroniky je možno ProtoPlant rozšířit i o přídavné moduly. 
-Na vývoji těchto modulů se zatím stále pracuje.
-Těchto modulů existuje hned několik:
-
-\begin{itemize}
-    \item CPIM (Module Communication and Power Interface - modul potřebný pro drátové připojení ostatních modulů - viz. \autoref{subsec:CPIM})
-    \item PSpl (Power Splitter - rozdělovač napájení)
-    \item SHSM (Soil Humidity Sensorics Module - modul vybavený senzory pro měření vlhkosti půdy - viz. \autoref{subsec:SHSM})
-    \item SEM (Sensorics Expansion Module - modul pro zvýšení počtu senzorů připojených k ProtoPlantu - viz. \autoref{subsec:SEM})
-    \item PCM (Pump Control Module - modul pro sledování hladiny vody v nádrži a ovládání čerpadla - viz. \autoref{subsec:PCM})
-    \item RCM (Remote Control Module - modul pro připojení vzdáleného ovládacího panelu - viz. \autoref{subsec:RCM})
-\end{itemize}
-
-\paragraph{Napájení přídavných modulů}
-je prováděno ve čtyřech režimech.
-\begin{itemize}
-    \item napájení přímo z řídící jednotky
-    \item napájení z externího zdroje přes CPIM
-    \item napájení přes PSpl
-    \item napájení každého modulu odděleně
-\end{itemize}
-
-\subparagraph{Napájení přimo z řídící jednotky}
-je možno použít pouze tehdy, když je připojen maximálně jeden modul a to z důvodu, aby bylo zabráněno podpětí celého systému.
-Modul je takto připojen přímo k napájecímu okruhu A řídící jednotky (viz. \autoref{par:PowerCircuitA}).
-
-\subparagraph{Použití externího zdroje připojeného k CPIM}
-\label{subpar:suplyingViaCPIM}
-je použitelné v případě, kdy uživatel upřednostňuje kabelovou komunikaci mezi moduly a řídící jednotkou.
-Při napájení v tomto režimu je počet připojitelných modulů omezen pouze výkonem zdroje napájení připojeného k CPIM.
-Na vstupní napájecí svorkovnici je připojen externí zdroj. 
-Kromě dvou kabelů pro komunikaci jsou na výstupu připojeny i napájecí kabely od jednotlivých modulů.
-
-\subparagraph{Napájení přes PSpl}
-funguje na velmi podobném principu, jako předchozí varianta. 
-K PSpl je na vstupní svorkovnici připojen externí zdroj napájení.
-Na výstupních svorkovnicích jsou připojeny napájecí kabely jednotlivých modulů.
-Tato metoda je určena primárně pro bezdrátovou komunikaci mezi řídící jednotkou a moduly.
-
-\subparagraph{Napájení každého modulu odděleně}
-je nejjednodušší metoda napájení.
-Každý z modulů je připojen vlastním kabelem přímo k napájecímu zdroji.
-Primárně je určena pro bezdrátovou komunikaci mezi jednotlivými moduly. 
-
-\subsection{CPIM - Module Communication and Power Interface}
-\label{subsec:CPIM}
-Tento modul funguje jako propojovací uzel mezi řídící jednotkou a všemi přídavnými moduly.
-Dále slouží pro připojení externího napájení pro jednotlivé další moduly (viz. \autoref{subpar:suplyingViaCPIM}).
-
-\subsection{SHSM - Soil Humidity Sensorics Module}
-\label{subsec:SHSM}
-Modul určený pro připojení senzorů měřících vlhkost půdy.
-Tento modul je zatím stále ve stádiu konceptu.
-
-\subsection{SEM - Sensorics Expansion Module}
-\label{subsec:SEM}
-Modul určený pro zvýšení pokrytí prostoru skleníku přidáním dalších enviromentálních senzorů.
-Pro malé, případně středně velké skleníky není tento modul potřebný. 
-Ve velkých sklenících již své uplatnění najde, vzhledem k tomu, že je vybaven vlastní řídící elektronikou a jediným omezením je dosah zvoleného způsobu komunikace s řídící jednotkou.
-
-\subsection{PCM - Pump Control Module}
-\label{subsec:PCM}
-Valná většina zahrádkářů má pro svůj skleník i nádrž na vodu.
-Tento modul je určen pro sledování hladiny vody v ní a případné spínání čerpadla, které má za úkol v nádrži vodu doplňovat.
-
-\subsection{RCM - Remote Control Module}
-\label{subsec:RCM}
-Byl vytvořen pro zjednodušení nastavení a ovládání ProtoPlantu.
-Skládá se ze dvou částí. 
-Komunikační části, kterou lze připojit k základní desce ProtoPlantu a ovládacího panelu. 
-Uživatel ovládací panel nainstaluje na zeď přímo v domě a může díky němu vzdáleně ovládat celý ProtoPlant přímo z pohodlí domova. 
-
-\section{Krabice pro řídící elektroniku a jejich interiér}
-To be done.
-
-\subsection{Instalace elektroniky do krabic - tzv. StoryMount}
-To be done.
-
-\subsection{Těsnění}
-To be done.
-
-\subsection{Ochrana elektroniky před přehřátím a vlhkostí}
 To be done.
 
 \newpage
