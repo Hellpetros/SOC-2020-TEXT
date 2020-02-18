@@ -54,36 +54,56 @@ je nejjednodušší metoda napájení.
 Každý z modulů je připojen vlastním kabelem přímo k napájecímu zdroji.
 Primárně je určena pro bezdrátovou komunikaci mezi jednotlivými moduly. 
 
-\subsection{CIPM - Module Communication and Power Interface}
+\subsection{CIPM - Komunikační a napájecí modul}
 \label{subsec:CIPM}
 Tento modul funguje jako propojovací uzel mezi řídící jednotkou a všemi přídavnými moduly.
 Dále slouží pro připojení externího napájení pro jednotlivé další moduly (viz. \autoref{subpar:suplyingViaCIPM}).
 
-\subsection{SHSM - Soil Humidity Sensorics Module}
+\subsection{SHSM - Modul měření vlhkosti půdy}
 \label{subsec:SHSM}
 Modul určený pro připojení senzorů měřících vlhkost půdy.
 Tento modul je zatím stále ve stádiu konceptu.
 
-\subsection{SEM - Sensorics Expansion Module}
+\subsection{SEM - Modul rozšíření senzoriky}
 \label{subsec:SEM}
 Modul určený pro zvýšení pokrytí prostoru skleníku přidáním dalších enviromentálních senzorů.
 Pro malé, případně středně velké skleníky není tento modul potřebný. 
 Ve velkých sklenících již své uplatnění najde, vzhledem k tomu, že je vybaven vlastní řídící elektronikou a jediným omezením je dosah zvoleného způsobu komunikace s řídící jednotkou.
 
-\subsection{PCM - Pump Control Module}
+\subsection{PCM - Modul řízení čerpadel}
 \label{subsec:PCM}
 Valná většina zahrádkářů má pro svůj skleník i nádrž na vodu.
 Tento modul je určen pro sledování hladiny vody v ní a případné spínání čerpadla, které má za úkol v nádrži vodu doplňovat.
 
-\subsection{RCM - Remote Control Module}
+\subsection{RCM - Modul vzdáleného ovládání}
 \label{subsec:RCM}
 Byl vytvořen pro zjednodušení nastavení a ovládání ProtoPlantu.
 Skládá se ze dvou částí. 
 Komunikační části, kterou lze připojit k základní desce ProtoPlantu a ovládacího panelu. 
 Uživatel ovládací panel nainstaluje na zeď přímo v domě a může díky němu vzdáleně ovládat celý ProtoPlant přímo z pohodlí domova. 
 
-\subsection{Instalace elektroniky do krabic - tzv. StoryMount}
-To be done.
+\subsection{Instalace elektroniky do boxů - tzv. StoryMount}
+Instalace řídící elektroniky do vodotěsných boxů je řešena díly vytisknutými na 3D tiskárně z materiálu ABS-T.
+Ten jsem zvolil pro jeho odolnost a malou nasákavost.
+Nevýhodou tohoto materiálu je nižší odolnost proti UV záření, proti kterému jsou ovšem díly v boxu chráněné.
+
+Konstrukci pro upevnění tvoří zpravidla 3 části:
+\begin{itemize}
+    \item montážní deska
+    \item kabelový unašeč
+    \item kartuše se silikagelem
+\end{itemize}
+
+\noindent\B{Montážní deska} je největší částí celého držáku. 
+Na spodní straně se nachází drážky pro správné umístění do boxu.
+Z jedné z bočních stran se nachází drážky pro umístění kartuše se silikagelem.
+Ze strany směřující do volného prostoru boxu se nacházejí výstupky, které se zasunou do drážek v montážní desce pro zdroj.
+Na horní straně jsou umístěny otvory pro připevnění základní desky a drážky pro upevnění kabelových unašečů.
+
+\noindent\B{Kabelové unašeče} jsou částí složenou z více menších dílů.
+Jejich úkolem je upevnění kabelů do větších svazků pro vyšší přehlednost.
+
+\noindent\B{Kartuše se silikagelem} má na sobě drážky pro zasunutí do jejich protikusů na montážní desce.
 
 \subsection{Těsnění}
 To be done.

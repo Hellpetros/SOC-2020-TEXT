@@ -56,14 +56,14 @@
       <file>blx-compat.def</file>
       <file>blx-bibtex.def</file>
       <file>biblatex.def</file>
-      <file>iso-numeric.bbx</file>
       <file>iso.bbx</file>
-      <file>iso-numeric.cbx</file>
+      <file>iso-numeric.bbx</file>
       <file>numeric.cbx</file>
       <file>iso-fullcite.cbx</file>
+      <file>iso-numeric.cbx</file>
       <file>biblatex.cfg</file>
-      <file>czech-iso.lbx</file>
       <file>czech.lbx</file>
+      <file>czech-iso.lbx</file>
     </requires>
   </internal>
   <external package="biblatex" priority="5" active="0">
