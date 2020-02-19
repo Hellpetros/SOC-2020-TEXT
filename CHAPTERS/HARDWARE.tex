@@ -1,6 +1,7 @@
 \chapter{Jednotlivé moduly ProtoPlantu}
 ProtoPlant je modulární systém - není tedy jedním velkým celkem, se všemi funkcemi přímo zaintegrovanými.
 V této kapitole se zaměřím na podrobný popis jednotlivých modulů.
+
 \section{PPCU - ProtoPlant Control Unit}
 PPCU, neboli řídící jednotka je hlavním modulem celého systému.
 Samotné PPCU tvoří elektroinstalační box s krytím IP65.
@@ -22,6 +23,7 @@ Těchto modulů existuje hned několik:
     \item PCM (Pump Control Module - modul pro sledování hladiny vody v nádrži a ovládání čerpadla - viz. \autoref{subsec:PCM})
     \item RCM (Remote Control Module - modul pro připojení vzdáleného ovládacího panelu - viz. \autoref{subsec:RCM})
 \end{itemize}
+Zjednodušené schéma zapojení a funkce jednotlivých modulů naleznete na \autoref{fig:add-MODULES}.
 
 \paragraph{Napájení přídavných modulů}
 je prováděno ve čtyřech režimech.
@@ -216,23 +218,26 @@ Samotný konektor má dva zemnící vývody, dva napájecí (1~x~5~V~a~1~x~3,3~V
 Přesnější zapojení je opět k~dispozici v~datasheetech jednotlivých desek.
 
 \section{PPSB - Desky se senzory teploty a vlhkosti}
-Deska osazená senzory pro měření teploty DS18B20 (viz. \autoref{sec:DS18B20}) a vlhkosti BME280 (viz. \autoref{sec:BME280}). 
+Desky osazené senzory DS18B20\cite{DS18B20} (PPSB-T) a DHT22\cite{DHT22} (PPSB-TH).
+Pro oba typy desek jsem navrhl a s pomocí 3D tisku vyrobil vlastní krabičky.\newline
 
-\noindent\B{PPSB-T}
--- deska osazená jedním senzorem DS18B20 zapojeným v režimu parazitního napájení.
+\noindent\B{PPSB-T} -- deska osazená jedním senzorem DS18B20 \cite{DS18B20} zapojeným v režimu parazitního napájení (viz. \autoref{sec:DS18B20}).
 V něm je senzor napájen přímo ze sběrnice OneWire, stačí mu tedy pro připojení pouze dva kabely (více v \cite{DS18B20}).
 Deska má jednu vstupní a jednu výstupní stranu, senzory se takto dají řetězit.
 
+Vizualizaci desky naleznete na obrázku \ref{fig:PPSB-T_VISUAL}.\newline \newline
+
 \begin{figure}[h]
     \centering
-   \includegraphics[width=\textwidth]{img/HARDWARE/PPSB-T.png}
+   \includegraphics[width=\textwidth]{img/HARDWARE/PPSB-T_CHAIN.png}
    \caption{Řetězení desek PPSB-T.}
    \label{fig:PPSB-T_wiring}
 \end{figure}
 
-\noindent\B{PPSB-TH}
-
-\noindent\B{PPSB-THM}
+\noindent\B{PPSB-TH} osazena senzorem DHT22 \cite{DHT22} je schopna měřit vzdušnou vlhkost i teplotu.
+Více o tomto senzoru naleznete v sekci \ref{sec:DHT22}.
+Narozdíl od PPSB-T tyto desky nelze řetězit.
+Vizualizace naleznete na obrázku \ref{fig:PPSB-TH_VISUAL}.\newline
 
 \section{Senzorika}
 ProtoPlant primárně podporuje 3 typy senzorů. 
