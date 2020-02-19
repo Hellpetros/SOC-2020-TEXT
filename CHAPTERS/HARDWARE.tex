@@ -215,10 +215,24 @@ Dvanácti-pinový konektor PanCon slouží pro připojení kabelu od hlavního �
 Samotný konektor má dva zemnící vývody, dva napájecí (1~x~5~V~a~1~x~3,3~V), dva vývody sběrnice I\textsuperscript{2}C a 6 vývodů pro připojení tlačítek a přepínačů.
 Přesnější zapojení je opět k~dispozici v~datasheetech jednotlivých desek.
 
-
-
-\section{PPSB - Deska se senzory teploty a vlhkosti}
+\section{PPSB - Desky se senzory teploty a vlhkosti}
 Deska osazená senzory pro měření teploty DS18B20 (viz. \autoref{sec:DS18B20}) a vlhkosti BME280 (viz. \autoref{sec:BME280}). 
+
+\noindent\B{PPSB-T}
+-- deska osazená jedním senzorem DS18B20 zapojeným v režimu parazitního napájení.
+V něm je senzor napájen přímo ze sběrnice OneWire, stačí mu tedy pro připojení pouze dva kabely (více v \cite{DS18B20}).
+Deska má jednu vstupní a jednu výstupní stranu, senzory se takto dají řetězit.
+
+\begin{figure}[h]
+    \centering
+   \includegraphics[width=\textwidth]{img/HARDWARE/PPSB-T.png}
+   \caption{Řetězení desek PPSB-T.}
+   \label{fig:PPSB-T_wiring}
+\end{figure}
+
+\noindent\B{PPSB-TH}
+
+\noindent\B{PPSB-THM}
 
 \section{Senzorika}
 ProtoPlant primárně podporuje 3 typy senzorů. 
