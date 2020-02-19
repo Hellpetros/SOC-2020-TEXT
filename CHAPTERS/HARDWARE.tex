@@ -82,8 +82,11 @@ Skládá se ze dvou částí.
 Komunikační části, kterou lze připojit k základní desce ProtoPlantu a ovládacího panelu. 
 Uživatel ovládací panel nainstaluje na zeď přímo v domě a může díky němu vzdáleně ovládat celý ProtoPlant přímo z pohodlí domova. 
 
-\subsection{Instalace elektroniky do boxů - tzv. StoryMount}
-Instalace řídící elektroniky do vodotěsných boxů je řešena díly vytisknutými na 3D tiskárně z materiálu ABS-T.
+\subsection{Uložení řídící elektroniky}
+Řídící elektronika (základní deska, řadiče, kabeláž, atp.) je uložena v průmyslových elektroinstalačních boxech s krytím IP65 (\It{úplná prachotěsnost a odolnost proti tryskající vodě} \cite{IP_ratings}).
+Vyvedení kabelů z těchto boxů je řešeno s pomocí kabelových průchodek se stejnou úrovní krytí.
+
+Upevnění řídící elektroniky do těchto boxů je řešena díly vytisknutými na 3D tiskárně z materiálu ABS-T.
 Ten jsem zvolil pro jeho odolnost a malou nasákavost.
 Nevýhodou tohoto materiálu je nižší odolnost proti UV záření, proti kterému jsou ovšem díly v boxu chráněné.
 
@@ -105,8 +108,8 @@ Jejich úkolem je upevnění kabelů do větších svazků pro vyšší přehled
 
 \noindent\B{Kartuše se silikagelem} má na sobě drážky pro zasunutí do jejich protikusů na montážní desce.
 
-\subsection{Těsnění}
-To be done.
+%\section{Ochrana elektroniky před přehřátím a vlhkostí}
+%To be done.
 
 \chapter{Tištěné spoje}
 Všechny prototypy základních desek ProtoPlantu byly založeny na univerzálních tištěných spojích. Vzhledem k~tomu, že jsem po stránce vzhledu i funkčnosti nebyl s~takovýmto provedením spokojen, rozhodl jsem se nechat vyrobit vlastní tištěné spoje pro základní desku i senzorové moduly.
@@ -212,8 +215,7 @@ Dvanácti-pinový konektor PanCon slouží pro připojení kabelu od hlavního �
 Samotný konektor má dva zemnící vývody, dva napájecí (1~x~5~V~a~1~x~3,3~V), dva vývody sběrnice I\textsuperscript{2}C a 6 vývodů pro připojení tlačítek a přepínačů.
 Přesnější zapojení je opět k~dispozici v~datasheetech jednotlivých desek.
 
-\section{Ochrana elektroniky před přehřátím a vlhkostí}
-To be done.
+
 
 \section{PPSB - Deska se senzory teploty a vlhkosti}
 Deska osazená senzory pro měření teploty DS18B20 (viz. \autoref{sec:DS18B20}) a vlhkosti BME280 (viz. \autoref{sec:BME280}). 

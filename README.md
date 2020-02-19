@@ -15,9 +15,6 @@ This repository contains data for my SOČ thesis about greenhouse automation.
 - DS18B20 subsec.
 - BME280 subsec.
 - DHT22 subsec.
-- Krabice pro ridici elektroniku a jejich interier section
-- Instalace elektroniky do krabic - tzv. StoryMount subsec.
-- Tesneni subsec.
 - Ochrana elektroniky pred prehratim a vlhkosti subsec.
 
 ### KONKURENCE chptr.
@@ -36,7 +33,6 @@ This repository contains data for my SOČ thesis about greenhouse automation.
 - Nouzový režim paragraph
 
 ### VYVOJ chptr.
-- Finish -> paragraph Verze x3.2
 - ProtoPlant verze 5.0 sec.
 
 ## TODO list
