@@ -1,5 +1,5 @@
 \chapter{Software základní desky}
-Tato kapitola se zaměřuje na software základní desky ProtoPlantu a detailně popisuje jeho funkci.
+Tato kapitola se zaměřuje na software základní desky PROTOPlantu a detailně popisuje jeho funkci.
 Na software ostatních modulů se zaměřuje následující kapitola \ref{chap:moduleSoftware}.
 
 \paragraph{Blokové schéma funkce softwaru základní desky}
@@ -23,14 +23,14 @@ Koncový uživatel, který se rozhodne software modifikovat, poté pouze v~hlavn
 Celý software 
 
 \section{Datové sběrnice}
-ProtoPlant primárně využívá dvě datové sběrnice:
+PROTOPlant primárně využívá dvě datové sběrnice:
 \begin{itemize}
     \item I\superscript{2}C
     \item OneWire
 \end{itemize}
 
 \paragraph{Sběrnici I\superscript{2}C}
-používá ProtoPlant pro komunikaci se zařízeními na stejné desce, případně pro řízení LCD displeje instalovaného na řídícím panelu (připojení přes PanCon). 
+používá PROTOPlant pro komunikaci se zařízeními na stejné desce, případně pro řízení LCD displeje instalovaného na řídícím panelu (připojení přes PanCon). 
 
 \subparagraph{Princip}
 Na sběrnici je připojeno jedno zařízení jakožto master (řídící) a jedno, či více zařízení jako slave (řízená).
@@ -55,10 +55,10 @@ Celý proces názorně zobrazuje obrázek \ref{fig:I2C-protocol}.
 \end{figure}
 
 \paragraph{Sběrnice OneWire}
-Sběrnici OneWire používá ProtoPlant pro komunikaci s~teplotními čidly DS18B20. 
+Sběrnici OneWire používá PROTOPlant pro komunikaci s~teplotními čidly DS18B20. 
 
 \section{Komunikace mezi řídící jednotkou a jednotlivými moduly}
-ProtoPlant podporuje dva režimy komunikace řídící jednotky s přídavnými moduly:
+PROTOPlant podporuje dva režimy komunikace řídící jednotky s přídavnými moduly:
 \begin{itemize}
     \item bezdrátová komunikace přes Wi-Fi
     \item kabelová komunikace přes UART (standart RS-485)
@@ -67,13 +67,17 @@ ProtoPlant podporuje dva režimy komunikace řídící jednotky s přídavnými 
 \section{Bezdrátová komunikace}
 Je vhodná primárně pro malé skleníky v oblastech, kde nehrozí zarušení signálu.
 
-
 \section{Kabelová komunikace a RS-485}
-To be done.
+Kabelová komunikace probíhá přes tzv. UART (Universal Asynchronnous Receiver and Transmitter - univerzální asynchronní přijímač a vysílač).
+PROTOPlant využívá průmyslový standart RS-485 umožňující komunikaci s pomocí dvojlinky.
+Opět je zde uplatněn princip master - slave (řídící jednotka je master, ostatní moduly slave).
+Pro tento způsob komunikace existuje několik protokolů, pro příklad velmi často používaný ModBus, nebo nedávno vytvořený JANUS\cite{JANUS}, který používám. 
+Více o principu RS-485 a samotném protokolu v \cite[21-25]{JANUS}
 
 \chapter{Software dalších modulů}
 \label{chap:moduleSoftware}
-To be done.
+Software přídavných modulů je navržen tak, aby k jeho běhu nebyl zapotřebí velký výpočetní výkon.
+Obecně lze jejich funkci znázornit blokovým diagramem \ref{fig:PPCU-to-MODULE-communication}.
 
 \chapter{Zvláštní stavy}
 To be done.
