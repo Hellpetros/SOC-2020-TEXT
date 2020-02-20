@@ -13,7 +13,6 @@ This repository contains data for my SOČ thesis about greenhouse automation.
 
 ### IN HARDWARE chptr.
 - DS18B20 subsec.
-- BME280 subsec.
 - DHT22 subsec.
 - Ochrana elektroniky pred prehratim a vlhkosti subsec.
 

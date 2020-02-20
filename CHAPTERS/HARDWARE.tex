@@ -240,17 +240,20 @@ Narozdíl od PPSB-T tyto desky nelze řetězit.
 Vizualizace naleznete na obrázku \ref{fig:PPSB-TH_VISUAL}.\newline
 
 \section{Senzorika}
-ProtoPlant primárně podporuje 3 typy senzorů. 
-DS18B20 pro měření teploty, BME280 schopné velmi přesně měřit vzdušnou vlhkost a DHT22 schopné měřit vlhkost i teplotu.
+ProtoPlant primárně podporuje 2 typy senzorů. 
+DS18B20 pro měření teploty a DHT22 schopné měřit vlhkost i teplotu.
 Dále ProtoPlant podporuje připojení senzorů vlhkosti půdy pracujících na bázi elektrické vodivosti.
 
 \subsection{DS18B20}
 \label{sec:DS18B20}
-To be done.
+Senzory určené pro měření teploty. 
+Komunikují po sběrnici OneWire (více v \cite{DS18B20}, str. 4) vytvořené společností Maxim Integrated.
+Jsou určeny pro teplotní rozsahy -55~\degree C až +125~\degree C.
+V měřícím rozsahu -10~\degree C až +85~\degree C jsou schopny měřit s přesností na $\pm0,5$~\degree C.
 
-\subsection{BME280}
-\label{sec:BME280}
-To be done.
+%\subsection{BME280}
+%\label{sec:BME280}
+%To be done.
 
 \subsection{DHT22}
 \label{sec:DHT22}
