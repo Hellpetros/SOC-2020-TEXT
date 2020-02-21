@@ -1,14 +1,14 @@
-\chapter{Průběh vývoje ProtoPlantu}
-Za dobu vývoje ProtoPlant prošel můj systém spoustou velkých změn.
+\chapter{Průběh vývoje PROTOPlantu}
+Za dobu vývoje PROTOPlant prošel můj systém spoustou velkých změn.
 Vývoj byl započat začátkem roku 2018.
 Za tu dobu vyšlo již několik verzí softwaru i hardwaru.
 
-\section{ProtoPlant 1.0 až 4.0 (tzv. legacy verze)}
-Původní verze ProtoPlantu byly celkem 4 stabilní a několik vývojových.
+\section{PROTOPlant 1.0 až 4.0 (tzv. legacy verze)}
+Původní verze PROTOPlantu byly celkem 4 stabilní a několik vývojových.
 Tyto 4 stabilní verze jsou ve zkratce popsány níže.
 
 \subsection{Verze 1.0}
-Nejstarší funkční verze ProtoPlantu, založená na Arduinu DUE. 
+Nejstarší funkční verze PROTOPlantu, založená na Arduinu DUE. 
 Jeho software tvořilo jedno, stále se opakující vlákno.
 Nevýhodou tohoto postupu bylo nepřesné časování některých úkonů způsobeném používáním blokujících operací.
 Tato verze byla pouze shluk kabelů, přes které byly k Arduinu připojeny jednotlivé moduly senzorů.
@@ -24,12 +24,12 @@ Software byl kompletně přepsán a blokující funkce odstraněny.
 Díky tomu běžel software mnohem plynuleji.
 Co se týče hardwaru, tato verze již používala první prototyp základní desky, který byl osazen na univerzálním tištěném spoji.
 Zároveň jsem přidal podporu LCD znakového displaye, na který se vypisovaly naměřené hodnoty ze senzorů a různé stavové hlášky.
-Během vývoje této verze jsem také systém začal nazývat ProtoPlant.
+Během vývoje této verze jsem také systém začal nazývat PROTOPlant.
 
 \subsection{Verze 3.0 a další}
 Tato verze byla v minulém roce prezentována na okresním kole SOČ.
-Kromě několika prototypů základní desky, které se při jejím vývoji vystřídaly, došlo i k mnohým změnám ve funkci celého ProtoPlantu.
-Doposud používaná relé, kterými ProtoPlant spínal aktuátory, bylo nutno nahradit jiným řešením.
+Kromě několika prototypů základní desky, které se při jejím vývoji vystřídaly, došlo i k mnohým změnám ve funkci celého PROTOPlantu.
+Doposud používaná relé, kterými PROTOPlant spínal aktuátory, bylo nutno nahradit jiným řešením.
 Důvodem k tomu byl jejich příliš velký úbytek napětí, který způsoboval podpětí celé řídící elektroniky.
 Hledal jsem tedy způsob, jak vyřešit spínání aktuátorů tak, aby byl napěťový úbytek co nejmenší.
 Nakonec jsem objevil H-můstky VNH2SP30. 
@@ -37,7 +37,7 @@ Ty umožňují kromě regulace výstupního napětí velmi jednoduše obracet po
 Pro zjednodušení zapojení při testování jsem využíval Monster Moto Shield, na kterém jsou tato VNH osazena hned dvě.
 Proto mne napadlo využít druhé VNH jako víceúčelový výstup, ke kterému lze připojit čerpadlo, elektromagnetický ventil, případně jiná zařízení.
 V softwaru přibyla podpora tlačítek a menu zobrazované na LCD displeji, přes které se dalo měnit nastavení systému za chodu.
-Dále jsem ProtoPlant uzavřel do průmyslového elektroinstalačního boxu s krytím IP67.
+Dále jsem PROTOPlant uzavřel do průmyslového elektroinstalačního boxu s krytím IP67.
 Do víka boxu jsem nainstaloval LCD displej a ovládací tlačítka.
 \newline
 
@@ -51,12 +51,12 @@ Na ovládací panel jsem nainstaloval červený kryt s laserem gravírovanými p
 \noindent\B{Verze 3.2} byla prezentována na loňské celostátní přehlídce.
 Až na menší změny v interní elektronice řídící jednotky neznamenala větší posun ve vývoji.
 
-\section{ProtoPlant verze 5.0}
-Při pokračování dalšího vývoje verzemi 4.x jsem dospěl k závěru, že je na čase změnit způsob, jakým ProtoPlant funguje.
+\section{PROTOPlant verze 5.0}
+Při pokračování dalšího vývoje verzemi 4.x jsem dospěl k závěru, že je na čase změnit způsob, jakým PROTOPlant funguje.
 Rozhodl jsem se tedy kompletně změnit software a přepsat jej celý od začátku.
 Hardware se také dočkal velmi výrazných změn.
 
-Dal jsem se tedy do vývoje páté verze ProtoPlantu, v čemž pokračuji dále.
+Dal jsem se tedy do vývoje páté verze PROTOPlantu, v čemž pokračuji dále.
 Místo vývoje dalších prototypů základních desek jsem se rozhodl navrhnout vlastní tištěné spoje a nechat je vyrábět průmyslově.
 
 \newpage

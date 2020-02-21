@@ -33,10 +33,10 @@ PROTOPlant primárně využívá dvě datové sběrnice:
 používá PROTOPlant pro komunikaci se zařízeními na stejné desce, případně pro řízení LCD displeje instalovaného na řídícím panelu (připojení přes PanCon). 
 
 \subparagraph{Princip}
-Na sběrnici je připojeno jedno zařízení jakožto master (řídící) a jedno, či více zařízení jako slave (řízená).
+Na sběrnici je připojeno jedno zařízení jakožto master (řídící) a jedno či více zařízení jako slave (řízená).
 Tato zařízení jsou navzájem propojena dvěma dráty (proto se I\superscript{2}C někdy přezdívá TwoWire), serial clock (SCL) a serial data (SDA).
 Každé ze slave zařízení má sedmibitovou adresu (např. 0xE0), která musí být pro každé zařízení na jedné sběrnici odlišná.
-Některá zařízení mají tuto adresu pesvně zapsanou a nelze ji měnit, zatímco u~jiných ji lze změnit.
+Některá zařízení mají tuto adresu pevně zapsanou a nelze ji měnit, zatímco u~jiných ji lze změnit.
 Zařízení připojené jako v~režimu master tuto adresu nepotřebuje, vzhledem k~tomu, že on sám vždy adresuje jen jedno ze zařízení.
 
 \subparagraph{Komunikační protokol}
@@ -61,7 +61,7 @@ Sběrnici OneWire používá PROTOPlant pro komunikaci s~teplotními čidly DS18
 PROTOPlant podporuje dva režimy komunikace řídící jednotky s přídavnými moduly:
 \begin{itemize}
     \item bezdrátová komunikace přes Wi-Fi
-    \item kabelová komunikace přes UART (standart RS-485)
+    \item kabelová komunikace přes UART (standard RS-485)
 \end{itemize}
 
 \section{Bezdrátová komunikace}
@@ -69,7 +69,7 @@ Je vhodná primárně pro malé skleníky v oblastech, kde nehrozí zarušení s
 
 \section{Kabelová komunikace a RS-485}
 Kabelová komunikace probíhá přes tzv. UART (Universal Asynchronnous Receiver and Transmitter - univerzální asynchronní přijímač a vysílač).
-PROTOPlant využívá průmyslový standart RS-485 umožňující komunikaci s pomocí dvojlinky.
+PROTOPlant využívá průmyslový standard RS-485 umožňující komunikaci s pomocí dvojlinky.
 Opět je zde uplatněn princip master - slave (řídící jednotka je master, ostatní moduly slave).
 Pro tento způsob komunikace existuje několik protokolů, pro příklad velmi často používaný ModBus, nebo nedávno vytvořený JANUS\cite{JANUS}, který používám. 
 Více o principu RS-485 a samotném protokolu v \cite[21-25]{JANUS}
@@ -80,7 +80,7 @@ Software přídavných modulů je navržen tak, aby k jeho běhu nebyl zapotřeb
 Obecně lze jejich funkci znázornit blokovým diagramem \ref{fig:PPCU-to-MODULE-communication}.
 
 \chapter{Zvláštní stavy}
-To be done.
+
 
 \paragraph{Nouzový režim}
 \label{paragraph:nouzovyRezim}

@@ -1,27 +1,27 @@
-\chapter{Jednotlivé moduly ProtoPlantu}
-ProtoPlant je modulární systém - není tedy jedním velkým celkem, se všemi funkcemi přímo zaintegrovanými.
+\chapter{Jednotlivé modulyPROTOPlantu}
+PROTOPlant je modulární systém - není tedy jedním velkým celkem se všemi funkcemi přímo zaintegrovanými.
 V této kapitole se zaměřím na podrobný popis jednotlivých modulů.
 
-\section{PPCU - ProtoPlant Control Unit}
+\section{PPCU -PROTOPlant Control Unit}
 PPCU, neboli řídící jednotka je hlavním modulem celého systému.
 Samotné PPCU tvoří elektroinstalační box s krytím IP65.
 Na přední části se nachází ovládací panel s LCD displejem a ovládacími tlačítky.
 Z bočních stran jsou instalovány vodotěsné průchodky pro provlečení kabelů.
 
-Uvnitř se nachází základní deska (viz. \autoref{subsec:motherBoard}) a zdroj napájení.
+Uvnitř se nachází základní deska (viz \autoref{subsec:motherBoard}) a zdroj napájení.
 
-\section{Přídavné moduly ProtoPlantu}
-Kromě samotné řídící elektroniky je možno ProtoPlant rozšířit i o přídavné moduly. 
+\section{Přídavné moduly PROTOPlantu}
+Kromě samotné řídící elektroniky je možno PROTOPlant rozšířit i o přídavné moduly. 
 Na vývoji těchto modulů se zatím stále pracuje.
 Těchto modulů existuje hned několik:
 
 \begin{itemize}
-    \item CIPM (Communication Interface and Power Module  - modul potřebný pro drátové připojení ostatních modulů - viz. \autoref{subsec:CIPM})
+    \item CIPM (Communication Interface and Power Module  - modul potřebný pro drátové připojení ostatních modulů - viz \autoref{subsec:CIPM})
     \item PSpl (Power Splitter - rozdělovač napájení)
-    \item SHSM (Soil Humidity Sensorics Module - modul vybavený senzory pro měření vlhkosti půdy - viz. \autoref{subsec:SHSM})
-    \item SEM (Sensorics Expansion Module - modul pro zvýšení počtu senzorů připojených k ProtoPlantu - viz. \autoref{subsec:SEM})
-    \item PCM (Pump Control Module - modul pro sledování hladiny vody v nádrži a ovládání čerpadla - viz. \autoref{subsec:PCM})
-    \item RCM (Remote Control Module - modul pro připojení vzdáleného ovládacího panelu - viz. \autoref{subsec:RCM})
+    \item SHSM (Soil Humidity Sensorics Module - modul vybavený senzory pro měření vlhkosti půdy - viz \autoref{subsec:SHSM})
+    \item SEM (Sensorics Expansion Module - modul pro zvýšení počtu senzorů připojených k PROTOPlantu - viz \autoref{subsec:SEM})
+    \item PCM (Pump Control Module - modul pro sledování hladiny vody v nádrži a ovládání čerpadla - viz \autoref{subsec:PCM})
+    \item RCM (Remote Control Module - modul pro připojení vzdáleného ovládacího panelu - viz \autoref{subsec:RCM})
 \end{itemize}
 Zjednodušené schéma zapojení a funkce jednotlivých modulů naleznete na \autoref{fig:add-MODULES}.
 
@@ -36,7 +36,7 @@ je prováděno ve čtyřech režimech.
 
 \subparagraph{Napájení přimo z řídící jednotky}
 je možno použít pouze tehdy, když je připojen maximálně jeden modul a to z důvodu, aby bylo zabráněno podpětí celého systému.
-Modul je takto připojen přímo k napájecímu okruhu A řídící jednotky (viz. \autoref{par:PowerCircuitA}).
+Modul je takto připojen přímo k napájecímu okruhu A řídící jednotky (viz \autoref{par:PowerCircuitA}).
 
 \subparagraph{Použití externího zdroje připojeného k CIPM}
 \label{subpar:suplyingViaCIPM}
@@ -59,7 +59,7 @@ Primárně je určena pro bezdrátovou komunikaci mezi jednotlivými moduly.
 \subsection{CIPM - Komunikační a napájecí modul}
 \label{subsec:CIPM}
 Tento modul funguje jako propojovací uzel mezi řídící jednotkou a všemi přídavnými moduly.
-Dále slouží pro připojení externího napájení pro jednotlivé další moduly (viz. \autoref{subpar:suplyingViaCIPM}).
+Dále slouží pro připojení externího napájení pro jednotlivé další moduly (viz \autoref{subpar:suplyingViaCIPM}).
 
 \subsection{SHSM - Modul měření vlhkosti půdy}
 \label{subsec:SHSM}
@@ -70,7 +70,7 @@ Tento modul je zatím stále ve stádiu konceptu.
 \label{subsec:SEM}
 Modul určený pro zvýšení pokrytí prostoru skleníku přidáním dalších enviromentálních senzorů.
 Pro malé, případně středně velké skleníky není tento modul potřebný. 
-Ve velkých sklenících již své uplatnění najde, vzhledem k tomu, že je vybaven vlastní řídící elektronikou a jediným omezením je dosah zvoleného způsobu komunikace s řídící jednotkou.
+Ve velkých sklenících již své uplatnění najde vzhledem k tomu, že je vybaven vlastní řídící elektronikou a jediným omezením je dosah zvoleného způsobu komunikace s řídící jednotkou.
 
 \subsection{PCM - Modul řízení čerpadel}
 \label{subsec:PCM}
@@ -79,13 +79,13 @@ Tento modul je určen pro sledování hladiny vody v ní a případné spínán�
 
 \subsection{RCM - Modul vzdáleného ovládání}
 \label{subsec:RCM}
-Byl vytvořen pro zjednodušení nastavení a ovládání ProtoPlantu.
+Byl vytvořen pro zjednodušení nastavení a ovládání PROTOPlantu.
 Skládá se ze dvou částí. 
-Komunikační části, kterou lze připojit k základní desce ProtoPlantu a ovládacího panelu. 
-Uživatel ovládací panel nainstaluje na zeď přímo v domě a může díky němu vzdáleně ovládat celý ProtoPlant přímo z pohodlí domova. 
+Komunikační části, kterou lze připojit k základní desce PROTOPlantu a ovládacího panelu. 
+Uživatel ovládací panel nainstaluje na zeď přímo v domě a může díky němu vzdáleně ovládat celýPROTOPlant přímo z pohodlí domova. 
 
 \subsection{Uložení řídící elektroniky}
-Řídící elektronika (základní deska, řadiče, kabeláž, atp.) je uložena v průmyslových elektroinstalačních boxech s krytím IP65 (\It{úplná prachotěsnost a odolnost proti tryskající vodě} \cite{IP_ratings}).
+Řídící elektronika (základní deska, řadiče, kabeláž atp.) je uložena v průmyslových elektroinstalačních boxech s krytím IP65 (\It{úplná prachotěsnost a odolnost proti tryskající vodě} \cite{IP_ratings}).
 Vyvedení kabelů z těchto boxů je řešeno s pomocí kabelových průchodek se stejnou úrovní krytí.
 
 Upevnění řídící elektroniky do těchto boxů je řešena díly vytisknutými na 3D tiskárně z materiálu ABS-T.
@@ -114,7 +114,7 @@ Jejich úkolem je upevnění kabelů do větších svazků pro vyšší přehled
 %To be done.
 
 \chapter{Tištěné spoje}
-Všechny prototypy základních desek ProtoPlantu byly založeny na univerzálních tištěných spojích. Vzhledem k~tomu, že jsem po stránce vzhledu i funkčnosti nebyl s~takovýmto provedením spokojen, rozhodl jsem se nechat vyrobit vlastní tištěné spoje pro základní desku i senzorové moduly.
+Všechny prototypy základních desekPROTOPlantu byly založeny na univerzálních tištěných spojích. Vzhledem k~tomu, že jsem po stránce vzhledu i funkčnosti nebyl s~takovýmto provedením spokojen, rozhodl jsem se nechat vyrobit vlastní tištěné spoje pro základní desku i senzorové moduly.
 Díky tomuto jsem se naučil návrhu tištěných spojů a tvorbě výrobních podkladů v~programu Autodesk EAGLE.
 
 \section{PPMB32 -- Základní deska}
@@ -143,7 +143,7 @@ Obě verze desky jsou kromě sekce Control osazeny stejným hardwarem, tedy:
 \end{itemize}
 
 Kromě dalších součástek je přímo na desce osazen senzor DS18B20 chránící desku před přehřátím. 
-Pokud teplota základní desky překročí 50~\degree C, automaticky se přeruší veškeré operace a systém přejde do nouzového režimu (viz. kapitola \ref{paragraph:nouzovyRezim}).
+Pokud teplota základní desky překročí 50~\degree C, automaticky se přeruší veškeré operace a systém přejde do nouzového režimu (viz kapitola \ref{paragraph:nouzovyRezim}).
 
 \paragraph{PPMB32-F}
 Kompletní, samostatná deska. 
@@ -152,7 +152,7 @@ Má nižší profil, tudíž je možné ji použít i v~menších prostorech.
 Integrovaný programátor lze s~pomocí jumperů odpojit a přes programovací piny připojit externí. Tuto verzi jsem nazval PPMB32-F (označení F od anglického slova Full - kompletní).
 
 \paragraph{PPMB32-E}
-Vzhledem k~tomu, že je ProtoPlant veřejně dostupný, nebyl jsem si jist, zda by kompletní osazení takto velké desky zvládl i laik. 
+Vzhledem k~tomu, že jePROTOPlant veřejně dostupný, nebyl jsem si jist, zda by kompletní osazení takto velké desky zvládl i laik. 
 Napadlo mě proto vytvořit i druhou desku, na které by byly osazeny dutinkové lišty pro vsazení vývojové ESP32 DevKitC. 
 Odpadla by tedy nutnost kompletně osazovat sekci Control. 
 Tuto verzi jsem nazval PPMB32-E (označení E od anglického slova Easy - jednoduchý).
@@ -167,7 +167,7 @@ V~této části desky se nacházejí H-můstky VNH2SP30 společně s~regulátory
 Na verzi PPMB32-F je dále osazen AMS1117-3.3 pro napájení procesoru. 
 
 V~dolní části desky se poté nacházejí dva integrované obvody VNH2SP30, z~nichž jeden (VNH1) je určen pro ovládání aktuátorů manipulujících s~okny a druhý 
-(VNH2) má několik režimů funkce, podle připojeného výstupu:
+(VNH2) má několik režimů funkce podle připojeného výstupu:
 \begin{itemize}
     \item disabled (výstupy jsou deaktivovány)
     \item pump (VNH je použito pro spínání čerpadla, případně stykače řídícího čerpadlo)
@@ -180,8 +180,7 @@ Napájení desky je rozděleno do tří okruhů.
 \label{par:PowerCircuitA}
 Tento okruh je určen pro napájení řídící elektroniky.
 Má celkově 3 části, oddělené s~pomocí stabilizátorů napětí.
-Jejich propojení znázorňuje schéma .
-
+Jejich propojení znázorňuje schéma.
 Rozsah vstupního napětí pro tento okruh je 7,5~VDC až 18~VDC.
 
 \paragraph{Okruhy V1 a V2}
@@ -221,7 +220,7 @@ Přesnější zapojení je opět k~dispozici v~datasheetech jednotlivých desek.
 Desky osazené senzory DS18B20\cite{DS18B20} (PPSB-T) a DHT22\cite{DHT22} (PPSB-TH).
 Pro oba typy desek jsem navrhl a s pomocí 3D tisku vyrobil vlastní krabičky.\newline
 
-\noindent\B{PPSB-T} -- deska osazená jedním senzorem DS18B20 \cite{DS18B20} zapojeným v režimu parazitního napájení (viz. \autoref{sec:DS18B20}).
+\noindent\B{PPSB-T} -- deska osazená jedním senzorem DS18B20 \cite{DS18B20} zapojeným v režimu parazitního napájení (viz \autoref{sec:DS18B20}).
 V něm je senzor napájen přímo ze sběrnice OneWire, stačí mu tedy pro připojení pouze dva kabely (více v \cite{DS18B20}).
 Deska má jednu vstupní a jednu výstupní stranu, senzory se takto dají řetězit.
 
@@ -240,9 +239,9 @@ Narozdíl od PPSB-T tyto desky nelze řetězit.
 Vizualizace naleznete na obrázku \ref{fig:PPSB-TH_VISUAL}.\newline
 
 \section{Senzorika}
-ProtoPlant primárně podporuje 2 typy senzorů. 
+PROTOPlant primárně podporuje 2 typy senzorů. 
 DS18B20 pro měření teploty a DHT22 schopné měřit vlhkost i teplotu.
-Dále ProtoPlant podporuje připojení senzorů vlhkosti půdy pracujících na bázi elektrické vodivosti.
+DálePROTOPlant podporuje připojení senzorů vlhkosti půdy pracujících na bázi elektrické vodivosti.
 
 \subsection{DS18B20}
 \label{sec:DS18B20}
