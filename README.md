@@ -12,15 +12,6 @@ Celý repozitář spadá pod licenci CC BY-NC-SA 4.0.
 - UVOD
 - ZAVER
 
-### IN HARDWARE chptr.
-- DS18B20 subsec.
-- DHT22 subsec.
-
-### SOFTWARE chptr.
-- Sběrnice OneWire paragraph
-- Bezdrátová komunikace sec.
-- Software dalších modulů (sub)chptr.
-
 ## TODO list
 
 - Dodělat podklady k deskám. - URGENT

@@ -134,6 +134,7 @@ Senzory určené pro měření teploty.
 Komunikují po sběrnici OneWire (více v \cite{DS18B20}, str. 4) vytvořené společností Maxim Integrated.
 Jsou určeny pro teplotní rozsahy -55~\degree C až +125~\degree C.
 V měřícím rozsahu -10~\degree C až +85~\degree C jsou schopny měřit s přesností na $\pm0,5$~\degree C.
+K PPCU je možno připojit až 30 těchto senzorů.
 
 %\subsection{BME280}
 %\label{sec:BME280}
@@ -141,6 +142,11 @@ V měřícím rozsahu -10~\degree C až +85~\degree C jsou schopny měřit s př
 
 \subsection{DHT22}
 \label{sec:DHT22}
-To be done.
+Čidla, která měří vzdušnou vlhkost i teplotu.
+Jejich přesnost je $\pm2\%$ relativní vlhkosti a $\pm$0,5\degree C.
+Opakovatelnost měření je poté $\pm$1\% relativní vlhkosti a $\pm$0,2\degree C.
+Tyto senzory komunikují jednosběrnicově, není tedy možno je řetězit.
+K PPCU je možno připojit těchto senzorů až 6.
+Více viz \cite{DHT22}.
 
 \newpage
