@@ -1,6 +1,7 @@
 #### ENG VERSION FOLLOWS
 # SOČ 2020 - TEXT PRÁCE „AUTOMATICKÝ SKLENÍK“
 Repozitář obsahuje zdrojový kód textu práce „Automatický skleník“.
+Celý repozitář spadá pod licenci CC BY-NC-SA 4.0.
 
 [LINK TO TABLE WITH BUDGET](https://docs.google.com/spreadsheets/d/1ZI8_D_LJPej7IoSE3QkqMBanPijJOcWTwICOPSyZP_c/edit#gid=902149754)
 
