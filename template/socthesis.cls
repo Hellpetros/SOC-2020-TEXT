@@ -36,7 +36,7 @@
 %% hyperref \autoref nazvy
 \def\chapterautorefname{Kapitola}
 \def\sectionautorefname{Oddíl}
-\def\subsectionautorefname{Pododdíl}
+\def\subsectionautorefname{Sekce}
 \def\paragraphautorefname{Odstavec}
 \def\figureautorefname{Obrázek}
 \def\tableautorefname{Tabulka}
