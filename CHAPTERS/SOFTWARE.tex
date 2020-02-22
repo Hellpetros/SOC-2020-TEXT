@@ -20,7 +20,25 @@ Díky těmto knihovnám je většina zdrojového kódu uložena v~nich.
 Koncový uživatel, který se rozhodne software modifikovat, poté pouze v~hlavním programu definuje, které moduly spustit a do konfiguračního souboru zapíše nastavení daných modulů.
 
 \paragraph{Konfigurace softwaru}
-Celý software 
+Konfigurace softwaru pro jednotlivé verze hardwaru je řešena pomocí jednoho souboru.
+Podle toho, jak jsou jednotlivá makra v tomto souboru definována, prekompilátor následně sestaví software přímo pro danou verzi.
+Část konfiguračního souboru je zobrazena níže.
+V této části lze nastavit parametry přístupového bodu Wi-Fi, který si PROTOPlant sám vytvoří, sériové linky a displeje.
+\begin{lstlisting}
+    //If wifi credentials not set OR wifi not found, 
+    //create own AP with these credentials
+    #define AP_SSID ProtoPlant
+    #define AP_PASSWORD protoplant
+    
+    #define SERIAL_DEBUGGING    true
+    #define SERIAL_BAUDRATE     115200
+    
+    #define DISPLAY_CONNECTED   true
+    #define DISPLAY_ADDRESS     0x27
+    #define DISPLAY_TIMEOUT     10000
+    #define DISPLAY_COLONS      16
+    #define DISPLAY_ROWS        4
+\end{lstlisting}
 
 \section{Datové sběrnice}
 PROTOPlant primárně využívá dvě datové sběrnice:
@@ -29,8 +47,7 @@ PROTOPlant primárně využívá dvě datové sběrnice:
     \item OneWire
 \end{itemize}
 
-\paragraph{Sběrnici I\superscript{2}C}
-používá PROTOPlant pro komunikaci se zařízeními na stejné desce, případně pro řízení LCD displeje instalovaného na řídícím panelu (připojení přes PanCon). 
+\noindent\B{Sběrnici I\superscript{2}C} používá PROTOPlant pro komunikaci se zařízeními na stejné desce, případně pro řízení LCD displeje instalovaného na řídícím panelu (připojení přes PanCon). 
 
 \subparagraph{Princip}
 Na sběrnici je připojeno jedno zařízení jakožto master (řídící) a jedno či více zařízení jako slave (řízená).
@@ -50,7 +67,7 @@ Celý proces názorně zobrazuje obrázek \ref{fig:I2C-protocol}.
 \begin{figure}[htbp]
    \centering
    \includegraphics[width=\textwidth]{img/I2C.png}
-   \caption{Celý datový přenos po I2C sběrnici.}
+   \caption{Celý datový přenos po I2C sběrnici. Převzato z \cite{I2C_specs}}
    \label{fig:I2C-protocol}
 \end{figure}
 
@@ -80,10 +97,15 @@ Software přídavných modulů je navržen tak, aby k jeho běhu nebyl zapotřeb
 Obecně lze jejich funkci znázornit blokovým diagramem \ref{fig:PPCU-to-MODULE-communication}.
 
 \chapter{Zvláštní stavy}
+PROTOPlant má několik zvláštních stavů, ve kterých pracuje v omezeném režimu.
+Tyto stavy slouží primárně pro zabránění poškození systému.
 
-
-\paragraph{Nouzový režim}
-\label{paragraph:nouzovyRezim}
-To be done.
+\paragraph{Režim nouzového chlazení}
+\label{paragraph:CoolingMode}
+Do tohoto režimu přejde systém v případě, že teplotní senzor na základní desce PPCU detekuje přehřívání. 
+Dojde k automatickému vypnutí výstupů řídící jednotky.
+Poté se systém restartuje, aby vyloučil chybu softwaru.
+V případě, že softwarovou chybu nedetekuje, vyčká, než se teplota sníží na běžnou provozní hodnotu, kterou průběžně vypočítává z průměrů hodnot naměřených před prudkým nárůstem.
+Po ochlazení systém pokračuje v normálním chodu, ovšem na displeji zůstane upozornění, že k chybě došlo.
 
 \newpage

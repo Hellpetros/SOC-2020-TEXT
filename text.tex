@@ -6,6 +6,7 @@
 \usepackage{hyperref}
 \usepackage{gensymb} % balíček symbolů
 \usepackage{booktabs}
+\usepackage{listings}
 
 \usepackage{color} % balíček pro obarvování textů
 \usepackage{xcolor}  % zapne možnost používání barev, mj. pro \definecolor
@@ -14,6 +15,12 @@
 \usepackage[author=,status=draft]{fixme} % vkládání poznámek  
 % dva módy (status): draft (poznámky se zobrazují v PDF) / final (poznámky se nezobrazují v PDF)
 \usepackage{multirow}
+
+\lstset { %
+    language=C++,
+    backgroundcolor=\color{black!5}, % set backgroundcolor
+    basicstyle=\footnotesize,% basic font setting
+}
 
 \addbibresource{text.bib}
 \nocite{*}
