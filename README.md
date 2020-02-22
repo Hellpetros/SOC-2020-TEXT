@@ -24,14 +24,7 @@ Celý repozitář spadá pod licenci CC BY-NC-SA 4.0.
 ## TODO list
 
 - Dodělat podklady k deskám. - URGENT
-- Dopsat text!
 - Datasheety k deskám!!
 - Dořešit nákupy. - URGENT
 - Nechat vyrobit desky - URGENT
-
-
-## Nákupy
-- Filament 
-- Výroba desek
-
 
