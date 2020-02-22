@@ -103,10 +103,10 @@ Přesnější zapojení je opět k~dispozici v~datasheetech jednotlivých desek.
 
 \section{PPSB - Desky se senzory teploty a vlhkosti}
 Desky osazené senzory DS18B20\cite{DS18B20} (PPSB-T) a DHT22\cite{DHT22} (PPSB-TH).
-Pro oba typy desek jsem navrhl a s pomocí 3D tisku vyrobil vlastní krabičky.\newline
+Pro oba typy desek jsem navrhl a s~pomocí 3D tisku vyrobil vlastní krabičky.\newline
 
-\noindent\B{PPSB-T} -- deska osazená jedním senzorem DS18B20 \cite{DS18B20} zapojeným v režimu parazitního napájení (viz \autoref{sec:DS18B20}).
-V něm je senzor napájen přímo ze sběrnice OneWire, stačí mu tedy pro připojení pouze dva kabely (více v \cite{DS18B20}).
+\noindent\B{PPSB-T} -- deska osazená jedním senzorem DS18B20 \cite{DS18B20} zapojeným v~režimu parazitního napájení (viz \autoref{sec:DS18B20}).
+V~něm je senzor napájen přímo ze sběrnice OneWire, stačí mu tedy pro připojení pouze dva kabely (více v~\cite{DS18B20}).
 Deska má jednu vstupní a jednu výstupní stranu, senzory se takto dají řetězit.
 
 Vizualizaci desky naleznete na obrázku \ref{fig:PPSB-T_VISUAL}.\newline \newline
@@ -119,7 +119,7 @@ Vizualizaci desky naleznete na obrázku \ref{fig:PPSB-T_VISUAL}.\newline \newlin
 \end{figure}
 
 \noindent\B{PPSB-TH} osazena senzorem DHT22 \cite{DHT22} je schopna měřit vzdušnou vlhkost i teplotu.
-Více o tomto senzoru naleznete v sekci \ref{sec:DHT22}.
+Více o~tomto senzoru naleznete v~sekci \ref{sec:DHT22}.
 Narozdíl od PPSB-T tyto desky nelze řetězit.
 Vizualizace naleznete na obrázku \ref{fig:PPSB-TH_VISUAL}.\newline
 
@@ -131,10 +131,10 @@ DálePROTOPlant podporuje připojení senzorů vlhkosti půdy pracujících na b
 \subsection{DS18B20}
 \label{sec:DS18B20}
 Senzory určené pro měření teploty. 
-Komunikují po sběrnici OneWire (více v \cite{DS18B20}, str. 4) vytvořené společností Maxim Integrated.
+Komunikují po sběrnici OneWire (více v~\cite{DS18B20}, str. 4) vytvořené společností Maxim Integrated.
 Jsou určeny pro teplotní rozsahy -55~\degree C až +125~\degree C.
-V měřícím rozsahu -10~\degree C až +85~\degree C jsou schopny měřit s přesností na $\pm0,5$~\degree C.
-K PPCU je možno připojit až 30 těchto senzorů.
+V~měřícím rozsahu -10~\degree C až +85~\degree C jsou schopny měřit s~přesností na $\pm0,5$~\degree C.
+K~PPCU je možno připojit až 30 těchto senzorů.
 
 %\subsection{BME280}
 %\label{sec:BME280}
@@ -146,7 +146,7 @@ K PPCU je možno připojit až 30 těchto senzorů.
 Jejich přesnost je $\pm2\%$ relativní vlhkosti a $\pm$0,5\degree C.
 Opakovatelnost měření je poté $\pm$1\% relativní vlhkosti a $\pm$0,2\degree C.
 Tyto senzory komunikují jednosběrnicově, není tedy možno je řetězit.
-K PPCU je možno připojit těchto senzorů až 6.
+K~PPCU je možno připojit těchto senzorů až 6.
 Více viz \cite{DHT22}.
 
 \newpage

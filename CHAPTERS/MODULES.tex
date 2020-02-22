@@ -1,17 +1,17 @@
 \chapter{Jednotlivé moduly PROTOPlantu}
 PROTOPlant je modulární systém - není tedy jedním velkým celkem se všemi funkcemi přímo zaintegrovanými.
-V této kapitole se zaměřím na podrobný popis jednotlivých modulů.
+V~této kapitole se zaměřím na podrobný popis jednotlivých modulů.
 
 \section{PPCU -- PROTOPlant Control Unit}
 PPCU, neboli řídící jednotka je hlavním modulem celého systému.
-Samotné PPCU tvoří elektroinstalační box s krytím IP65.
-Na přední části se nachází ovládací panel s LCD displejem a ovládacími tlačítky.
-Z bočních stran jsou instalovány vodotěsné průchodky pro provlečení kabelů.
+Samotné PPCU tvoří elektroinstalační box s~krytím IP65.
+Na přední části se nachází ovládací panel s~LCD displejem a ovládacími tlačítky.
+Z~bočních stran jsou instalovány vodotěsné průchodky pro provlečení kabelů.
 
 Uvnitř se nachází základní deska (viz \autoref{subsec:motherBoard}) a zdroj napájení.
 
 \section{Přídavné moduly PROTOPlantu}
-Kromě samotné řídící elektroniky je možno PROTOPlant rozšířit i o přídavné moduly. 
+Kromě samotné řídící elektroniky je možno PROTOPlant rozšířit i o~přídavné moduly. 
 Na vývoji těchto modulů se zatím stále pracuje.
 Těchto modulů existuje hned několik:
 
@@ -19,8 +19,8 @@ Těchto modulů existuje hned několik:
     \item CIPM (Communication Interface and Power Module  - modul potřebný pro drátové připojení ostatních modulů - viz \autoref{subsec:CIPM})
     \item PSpl (Power Splitter - rozdělovač napájení)
     \item SHSM (Soil Humidity Sensorics Module - modul vybavený senzory pro měření vlhkosti půdy - viz \autoref{subsec:SHSM})
-    \item SEM (Sensorics Expansion Module - modul pro zvýšení počtu senzorů připojených k PROTOPlantu - viz \autoref{subsec:SEM})
-    \item PCM (Pump Control Module - modul pro sledování hladiny vody v nádrži a ovládání čerpadla - viz \autoref{subsec:PCM})
+    \item SEM (Sensorics Expansion Module - modul pro zvýšení počtu senzorů připojených k~PROTOPlantu - viz \autoref{subsec:SEM})
+    \item PCM (Pump Control Module - modul pro sledování hladiny vody v~nádrži a ovládání čerpadla - viz \autoref{subsec:PCM})
     \item RCM (Remote Control Module - modul pro připojení vzdáleného ovládacího panelu - viz \autoref{subsec:RCM})
 \end{itemize}
 Zjednodušené schéma zapojení a funkce jednotlivých modulů naleznete na \autoref{fig:add-MODULES}.
@@ -28,32 +28,32 @@ Zjednodušené schéma zapojení a funkce jednotlivých modulů naleznete na \au
 \paragraph{Napájení přídavných modulů}
 je prováděno ve čtyřech režimech.
 \begin{itemize}
-    \item napájení přímo z řídící jednotky
-    \item napájení z externího zdroje přes CIPM
+    \item napájení přímo z~řídící jednotky
+    \item napájení z~externího zdroje přes CIPM
     \item napájení přes PSpl
     \item napájení každého modulu odděleně
 \end{itemize}
 
-\subparagraph{Napájení přimo z řídící jednotky}
-je možno použít pouze tehdy, když je připojen maximálně jeden modul a to z důvodu, aby bylo zabráněno podpětí celého systému.
-Modul je takto připojen přímo k napájecímu okruhu A řídící jednotky (viz \autoref{par:PowerCircuitA}).
+\subparagraph{Napájení přimo z~řídící jednotky}
+je možno použít pouze tehdy, když je připojen maximálně jeden modul a to z~důvodu, aby bylo zabráněno podpětí celého systému.
+Modul je takto připojen přímo k~napájecímu okruhu A~řídící jednotky (viz \autoref{par:PowerCircuitA}).
 
-\subparagraph{Použití externího zdroje připojeného k CIPM}
+\subparagraph{Použití externího zdroje připojeného k~CIPM}
 \label{subpar:suplyingViaCIPM}
-je použitelné v případě, kdy uživatel upřednostňuje kabelovou komunikaci mezi moduly a řídící jednotkou.
-Při napájení v tomto režimu je počet připojitelných modulů omezen pouze výkonem zdroje napájení připojeného k CIPM.
+je použitelné v~případě, kdy uživatel upřednostňuje kabelovou komunikaci mezi moduly a řídící jednotkou.
+Při napájení v~tomto režimu je počet připojitelných modulů omezen pouze výkonem zdroje napájení připojeného k~CIPM.
 Na vstupní napájecí svorkovnici je připojen externí zdroj. 
 Kromě dvou kabelů pro komunikaci jsou na výstupu připojeny i napájecí kabely od jednotlivých modulů.
 
 \subparagraph{Napájení přes PSpl}
 funguje na velmi podobném principu, jako předchozí varianta. 
-K PSpl je na vstupní svorkovnici připojen externí zdroj napájení.
+K~PSpl je na vstupní svorkovnici připojen externí zdroj napájení.
 Na výstupních svorkovnicích jsou připojeny napájecí kabely jednotlivých modulů.
 Tato metoda je určena primárně pro bezdrátovou komunikaci mezi řídící jednotkou a moduly.
 
 \subparagraph{Napájení každého modulu odděleně}
 je nejjednodušší metoda napájení.
-Každý z modulů je připojen vlastním kabelem přímo k napájecímu zdroji.
+Každý z~modulů je připojen vlastním kabelem přímo k~napájecímu zdroji.
 Primárně je určena pro bezdrátovou komunikaci mezi jednotlivými moduly. 
 
 \subsection{CIPM - Komunikační a napájecí modul}
@@ -70,25 +70,25 @@ Tento modul je zatím stále ve stádiu konceptu.
 \label{subsec:SEM}
 Modul určený pro zvýšení pokrytí prostoru skleníku přidáním dalších enviromentálních senzorů.
 Pro malé, případně středně velké skleníky není tento modul potřebný. 
-Ve velkých sklenících již své uplatnění najde vzhledem k tomu, že je vybaven vlastní řídící elektronikou a jediným omezením je dosah zvoleného způsobu komunikace s řídící jednotkou.
+Ve velkých sklenících již své uplatnění najde vzhledem k~tomu, že je vybaven vlastní řídící elektronikou a jediným omezením je dosah zvoleného způsobu komunikace s~řídící jednotkou.
 
 \subsection{PCM - Modul řízení čerpadel}
 \label{subsec:PCM}
 Valná většina zahrádkářů má pro svůj skleník i nádrž na vodu.
-Tento modul je určen pro sledování hladiny vody v ní a případné spínání čerpadla, které má za úkol v nádrži vodu doplňovat.
+Tento modul je určen pro sledování hladiny vody v~ní a případné spínání čerpadla, které má za úkol v~nádrži vodu doplňovat.
 
 \subsection{RCM - Modul vzdáleného ovládání}
 \label{subsec:RCM}
 Byl vytvořen pro zjednodušení nastavení a ovládání PROTOPlantu.
 Skládá se ze dvou částí. 
-Komunikační části, kterou lze připojit k základní desce PROTOPlantu a ovládacího panelu. 
-Uživatel ovládací panel nainstaluje na zeď přímo v domě a může díky němu vzdáleně ovládat celýPROTOPlant přímo z pohodlí domova. 
+Komunikační části, kterou lze připojit k~základní desce PROTOPlantu a ovládacího panelu. 
+Uživatel ovládací panel nainstaluje na zeď přímo v~domě a může díky němu vzdáleně ovládat celýPROTOPlant přímo z~pohodlí domova. 
 
 \subsection{Uložení řídící elektroniky}
-Řídící elektronika (základní deska, řadiče, kabeláž atp.) je uložena v průmyslových elektroinstalačních boxech s krytím IP65 (\It{úplná prachotěsnost a odolnost proti tryskající vodě} \cite{IP_ratings}).
-Vyvedení kabelů z těchto boxů je řešeno s pomocí kabelových průchodek se stejnou úrovní krytí.
+Řídící elektronika (základní deska, řadiče, kabeláž atp.) je uložena v~průmyslových elektroinstalačních boxech s~krytím IP65 (\It{úplná prachotěsnost a odolnost proti tryskající vodě} \cite{IP_ratings}).
+Vyvedení kabelů z~těchto boxů je řešeno s~pomocí kabelových průchodek se stejnou úrovní krytí.
 
-Upevnění řídící elektroniky do těchto boxů je řešena díly vytisknutými na 3D tiskárně z materiálu PET-G.
+Upevnění řídící elektroniky do těchto boxů je řešena díly vytisknutými na 3D tiskárně z~materiálu PET-G.
 Ten jsem zvolil pro jeho odolnost a nehygrofilnost.
 
 Konstrukci pro upevnění tvoří zpravidla 2 části:
@@ -99,11 +99,11 @@ Konstrukci pro upevnění tvoří zpravidla 2 části:
 
 \noindent\B{Montážní deska} je největší částí celého držáku. 
 Na spodní straně se nachází drážky pro správné umístění do boxu.
-Z jedné z bočních stran se nachází drážky pro umístění kartuše se silikagelem.
-Ze strany směřující do volného prostoru boxu se nacházejí výstupky, které se zasunou do drážek v montážní desce pro zdroj.
+Z~jedné z~bočních stran se nachází drážky pro umístění kartuše se silikagelem.
+Ze strany směřující do volného prostoru boxu se nacházejí výstupky, které se zasunou do drážek v~montážní desce pro zdroj.
 Na horní straně jsou umístěny otvory pro připevnění základní desky a drážky pro upevnění kabelových unašečů.
 
-\noindent\B{Kabelové unašeče} jsou částí složenou z více menších dílů.
+\noindent\B{Kabelové unašeče} jsou částí složenou z~více menších dílů.
 Jejich úkolem je upevnění kabelů do větších svazků pro vyšší přehlednost.
 
 %\section{Ochrana elektroniky před přehřátím a vlhkostí}
