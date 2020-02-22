@@ -2,7 +2,7 @@
 Potenciální konkurenci PROTOPlantu jsem rozdělil do dvou kategorií:
 \begin{itemize}
     \item průmyslová řešení
-    \item podomácku vytvořená "kutilská" řešení
+    \item podomácku vytvořená „kutilská“ řešení
 \end{itemize}
 
 \section{Průmyslová řešení}
@@ -15,9 +15,44 @@ Systémy spadající do této kategorie vyznačují se především tím, že js
 \end{itemize}
 
 Tato řešení jsou většinou řízena pomocí PLC, tedy průmyslových kontrolérů, která jsou povětšinou velmi drahá a náročná na programování.
+Dodávají je společnosti, které se touto problematikou přímo zabývají a systémy dodávají na zakázku velkým podnikům.
 
+\section{„Kutilská“ řešení}
+Jsou vytvořena lidmi, kteří elektrotechnice rozumí a mají čas na to si s elektronikou takto hrát.
+Taková řešení většinou jsou:
+\begin{itemize}
+    \item neuniverzální, lidé si je vytváří přímo pro sebe
+    \item časově nákladná na výrobu
+    \item nevhodná pro osoby, které nemají zkušenosti v elektrotechnice 
+\end{itemize}
 
-\section{}
+\section{Srovnání s PROTOPlantem}
+Pro srovnání PROTOPlantu a těchto dvou kategorií jsem sestavil tabulku \ref{tab:COMPARATION}.
 
+\begin{table}[h]
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{@{}l|lll@{}}
+        & \textbf{Průmyslová řešení} & \textbf{„Kutilská“ řešení} & \textbf{PROTOPlant}                                                                                   \\ \midrule
+    \textbf{Dodání}      & Výroba na zakázku          & „Vyrob si sám“             & \begin{tabular}[c]{@{}l@{}}Možnost sestavení přímo doma, \\ nebo dodání hotového systému\end{tabular} \\
+    \textbf{Cena}        & Drahé                      & Levné                      & Kompromis cena - výkon                                                                               \\
+    \textbf{Ovládání}    & Komplexní                  & Jednoduché (většinou)      & Jednoduché                                                                                            \\
+    \textbf{Konektivita} & Většinou ethernet          & Často Wi-Fi                & \begin{tabular}[c]{@{}l@{}}Wi-Fi, Bluetooth, \\ možnost přidání podpory Ethernetu\end{tabular}        \\
+    \textbf{Řízení}      & PLC                        & Většinou Arduino           & ESP32                                                                                                 \\ \bottomrule    
+    \end{tabular}%
+    }
+    \caption{Tabulka srovnání PROTOPlantu a jiných řešení.}
+    \label{tab:COMPARATION}
+\end{table}
+
+\noindent\B{Dodání} -- udává způsoby, jak si lidé mohou dané řešení opatřit.
+
+\noindent\B{Cena} -- srovnání cen jednotlivých řešení.
+
+\noindent\B{Ovládání} -- složitost/jednoduchost ovládání daného systému.
+
+\noindent\B{Konektivita} -- zda systém disponuje možností propojení s okolním světem.
+
+\noindent\B{Řízení} -- řídící jednotka daného řešení.
 
 \newpage
