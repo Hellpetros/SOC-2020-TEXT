@@ -16,11 +16,31 @@ Pro názorný příklad použití PROTOPlantu uvádím konkrétní případové 
 \subsection{Malý skleník s užitkovými rostlinami}
 Zahrádkář pěstující plodiny čistě pro zásobování sebe a své rodiny čerstvou zeleninou vlastní skleník s plochou obdělávané půdy 6x3 metry.
 Výška skleníku jsou přibližně dva metry, jeho objem je tedy vzhledem k tvaru skleníku \B{menší, než 36~m\superscript{3}}.
-Pro dostatečné pokrytí prostoru senzorikou tedy stačí dva senzory teploty (viz kapitola \ref{sec:DS18B20}) a dva senzory vzdušné vlhkosti (viz kapitola \ref{sec:DHT22}). 
+Pro dostatečné pokrytí prostoru senzorikou tedy stačí dva senzory teploty (viz kapitola \ref{sec:DS18B20}) a jeden senzor vzdušné vlhkosti (viz kapitola \ref{sec:DHT22}). 
 Vzhledem k obdělávané ploše, stačí použít 4 senzory půdní vlhkosti.
 Zavlažování je vzhledem k pěstovaným rostlinám řešeno děrovanou hadicí položenou přímo na půdě.
+Berme v potaz, že zahrádkář chce, aby PROTOPlant otevíral jen jedno okno.
+Vzhledem k velikosti okna postačí aktuátor s délkou výsuvu 20~cm.
 
-\fxnote[author=PŠ]{Zde přibudou fotografie babiččina skleníku a tabulka s cenami (dnes večer to spočítám)}
+\fxnote[author=PŠ]{Zde přibudou fotografie babiččina skleníku}
+
+\begin{table}[h]
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{llll}
+    \multicolumn{1}{l|}{\textbf{Položka}}            & \textbf{Počet kusů} & \multicolumn{1}{l|}{\textbf{Cena za kus}} & \textbf{Cena celkem} \\ \hline
+    \multicolumn{1}{l|}{Řídící jednotka}             & 1                   & \multicolumn{1}{l|}{1800 Kč}              & 1800 Kč              \\
+    \multicolumn{1}{l|}{Aktuátory pro ovládání oken} & 1                   & \multicolumn{1}{l|}{700 Kč}               & 700 Kč               \\
+    \multicolumn{1}{l|}{Senzory teploty}             & 2                   & \multicolumn{1}{l|}{60 Kč}                & 120 Kč               \\
+    \multicolumn{1}{l|}{Senzor vzdušné vlhkosti}     & 1                   & \multicolumn{1}{l|}{60 Kč}                & 60 Kč                \\
+    \multicolumn{1}{l|}{Senzor půdní vlhkosti}       & 4                   & \multicolumn{1}{l|}{25 Kč}                & 100 Kč               \\
+    \multicolumn{1}{l|}{Čerpadlo}                    & 1                   & \multicolumn{1}{l|}{800 Kč}               & 800 Kč               \\ \hline
+    Cena celkem                                      &                     &                                           & 3580 Kč             
+    \end{tabular}%
+    }
+    \caption{Tabulka s cenovou kalkulací systému pro menší skleník.}
+    \label{tab:SmallGreenhousePricing}
+\end{table}
 
 \subsection{Středně velký skleník s okrasnými rostlinami}
 Skleník, ve kterém PROTOPlant průběžně testuji je určen pro pěstování orchidejí. 
@@ -31,7 +51,23 @@ Vzhledem k tomu, že většina z těchto rostlin je epifytní, nesnášejí trva
 Z tohoto důvodu je zavlažování řešeno rozprašovačem umístěným pod stropem skleníku a upraveným nastavením jeho spínání.
 Neprobíhá tedy tak často.
 
-\fxnote[author=PŠ]{Zde přibude tabulka s cenou}
+\begin{table}[h]
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{llll}
+    \multicolumn{1}{l|}{\textbf{Položka}}            & \textbf{Počet kusů} & \multicolumn{1}{l|}{\textbf{Cena za kus}} & \textbf{Cena celkem} \\ \hline
+    \multicolumn{1}{l|}{Řídící jednotka}             & 1                   & \multicolumn{1}{l|}{1800 Kč}              & 1800 Kč              \\
+    \multicolumn{1}{l|}{Aktuátory pro ovládání oken} & 2                   & \multicolumn{1}{l|}{900 Kč}               & 1800 Kč              \\
+    \multicolumn{1}{l|}{Senzory teploty}             & 3                   & \multicolumn{1}{l|}{60 Kč}                & 180 Kč               \\
+    \multicolumn{1}{l|}{Senzor vzdušné vlhkosti}     & 2                   & \multicolumn{1}{l|}{60 Kč}                & 120 Kč               \\
+    \multicolumn{1}{l|}{Senzor půdní vlhkosti}       & 2                   & \multicolumn{1}{l|}{25 Kč}                & 50 Kč                \\
+    \multicolumn{1}{l|}{Čerpadlo}                    & 1                   & \multicolumn{1}{l|}{800 Kč}               & 1000 Kč              \\ \hline
+    Cena celkem                                      &                     &                                           & 4950 Kč             
+    \end{tabular}%
+    }
+    \caption{Tabulka s cenovou kalkulací systému pro větší skleník.}
+    \label{tab:MedGreenhousePricing}
+\end{table}
 
 \begin{figure}[htbp]
     \centering
