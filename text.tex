@@ -7,6 +7,7 @@
 \usepackage{gensymb} % balíček symbolů
 \usepackage{booktabs}
 
+\usepackage[toc,page]{appendix}
 \usepackage{color} % balíček pro obarvování textů
 \usepackage{xcolor}  % zapne možnost používání barev, mj. pro \definecolor
 \definecolor{mygreen}{RGB}{0,150,0} % nastavení barev odkazů 
@@ -105,8 +106,9 @@ greenhouse automation, ESP32, PROTOPlant, automation, open-source hardware, open
 
 % Zaver prace
 \input{CHAPTERS/ZAVER.tex}
+\newpage
 
-\chapter*{Přílohy}
+\appendix
 \addcontentsline{toc}{chapter}{Přílohy}
 % Tistene spoje a elektronika
 \input{CHAPTERS/ELECTRONICS_and_PCBs.tex}
@@ -114,8 +116,6 @@ greenhouse automation, ESP32, PROTOPlant, automation, open-source hardware, open
 % Podrobny popis softwaru
 \input{CHAPTERS/SOFTWARE.tex}
 
-\chapter*{Přílohy}
-\addcontentsline{toc}{chapter}{Příloha E: Obrazové přílohy}
 % Prilohy
 \input{CHAPTERS/PRILOHY.tex}
 

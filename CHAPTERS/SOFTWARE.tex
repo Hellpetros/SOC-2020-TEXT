@@ -1,12 +1,11 @@
-\chapter*{Software základní desky}
-\addcontentsline{toc}{chapter}{Příloha B: Software základní desky}
+\chapter{Software základní desky}
 Tato kapitola se zaměřuje na software základní desky PROTOPlantu a detailně popisuje jeho funkci.
 Na software ostatních modulů se zaměřuje následující kapitola \ref{chap:moduleSoftware}.
 
 \paragraph{Blokové schéma funkce softwaru základní desky}
 Schéma funkce softwaru základní desky je shrnuto blokovým diagramem XXX.
 
-\section*{Sdílené knihovny}
+\section{Sdílené knihovny}
 Z~důvodu usnadnění programování základní desky i ostatních rozšiřujících modulů jsem vytvořil několik sdílených knihoven. 
 V~nich je zahrnuto:
 \begin{itemize}
@@ -41,7 +40,7 @@ V~této části lze nastavit parametry přístupového bodu Wi-Fi, který si PRO
     #define DISPLAY_ROWS        4
 \end{lstlisting}
 
-\section*{Datové sběrnice}
+\section{Datové sběrnice}
 PROTOPlant primárně využívá dvě datové sběrnice:
 \begin{itemize}
     \item I\superscript{2}C
@@ -76,33 +75,31 @@ Celý proces názorně zobrazuje obrázek \ref{fig:I2C-protocol}.
 Sběrnici OneWire používá PROTOPlant pro komunikaci s~teplotními čidly DS18B20. 
 Více o~této komunikační sběrnici v~\cite{DS18B20}.
 
-\section*{Komunikace mezi řídící jednotkou a jednotlivými moduly}
+\section{Komunikace mezi řídící jednotkou a jednotlivými moduly}
 PROTOPlant podporuje dva režimy komunikace řídící jednotky s přídavnými moduly:
 \begin{itemize}
     \item bezdrátová komunikace přes Wi-Fi
     \item kabelová komunikace přes UART (standard RS-485)
 \end{itemize}
 
-\section*{Bezdrátová komunikace}
+\section{Bezdrátová komunikace}
 Je vhodná primárně pro malé skleníky v oblastech, kde nehrozí zarušení signálu.
 Tento způsob komunikace je zatím stále ve vývoji.
 
-\section*{Kabelová komunikace a RS-485}
+\section{Kabelová komunikace a RS-485}
 Kabelová komunikace probíhá přes tzv. UART (Universal Asynchronnous Receiver and Transmitter - univerzální asynchronní přijímač a vysílač).
 PROTOPlant využívá průmyslový standard RS-485 umožňující komunikaci s~pomocí dvojlinky.
 Opět je zde uplatněn princip master - slave (řídící jednotka je master, ostatní moduly slave).
 Pro tento způsob komunikace existuje několik protokolů, pro příklad velmi často používaný ModBus, nebo nedávno vytvořený JANUS\cite{JANUS}, který používám. 
 Více o~principu RS-485 a samotném protokolu v~\cite[21-25]{JANUS}
 
-\chapter*{Software dalších modulů}
-\addcontentsline{toc}{chapter}{Příloha C: Software dalších modulů}
+\chapter{Software dalších modulů}
 
 \label{chap:moduleSoftware}
 Software přídavných modulů je navržen tak, aby k~jeho běhu nebyl zapotřebí velký výpočetní výkon.
 Obecně lze jejich funkci znázornit blokovým diagramem \ref{fig:PPCU-to-MODULE-communication}.
 
-\chapter*{Zvláštní stavy}
-\addcontentsline{toc}{chapter}{Příloha D: Zvláštní stavy}
+\chapter{Zvláštní stavy}
 PROTOPlant má několik zvláštních stavů, ve kterých pracuje v omezeném režimu.
 Tyto stavy slouží primárně pro zabránění poškození systému.
 

@@ -1,9 +1,8 @@
-\chapter*{Elektronika a tištěné spoje}
-\addcontentsline{toc}{chapter}{Příloha A: Elektronika a tištěné spoje}
+\chapter{Elektronika a tištěné spoje}
 Všechny prototypy základních desekPROTOPlantu byly založeny na univerzálních tištěných spojích. Vzhledem k~tomu, že jsem po stránce vzhledu i funkčnosti nebyl s~takovýmto provedením spokojen, rozhodl jsem se nechat vyrobit vlastní tištěné spoje pro základní desku i senzorové moduly.
 Díky tomuto jsem se naučil návrhu tištěných spojů a tvorbě výrobních podkladů v~programu Autodesk EAGLE.
 
-\section*{PPMB32 -- Základní deska}
+\section{PPMB32 -- Základní deska}
 \label{subsec:motherBoard}
 Základní deska je rozdělena do několika částí. 
 Vzhledem k~tomu, že umím pájet velmi dobře, rozhodl jsem se pro ruční osazení všech součástek, které byly doposud osazeny pouze na různých modulech připojených k~základní desce, včetně procesoru ESP32-WROOM32D.
@@ -102,7 +101,7 @@ Dvanácti-pinový konektor PanCon slouží pro připojení kabelu od hlavního �
 Samotný konektor má dva zemnící vývody, dva napájecí (1~x~5~V~a~1~x~3,3~V), dva vývody sběrnice I\textsuperscript{2}C a 6 vývodů pro připojení tlačítek a přepínačů.
 Přesnější zapojení je opět k~dispozici v~datasheetech jednotlivých desek.
 
-\section*{PPSB - Desky se senzory teploty a vlhkosti}
+\section{PPSB - Desky se senzory teploty a vlhkosti}
 Desky osazené senzory DS18B20\cite{DS18B20} (PPSB-T) a DHT22\cite{DHT22} (PPSB-TH).
 Pro oba typy desek jsem navrhl a s~pomocí 3D tisku vyrobil vlastní krabičky.\newline
 
@@ -124,12 +123,12 @@ Více o~tomto senzoru naleznete v~sekci \ref{sec:DHT22}.
 Narozdíl od PPSB-T tyto desky nelze řetězit.
 Vizualizace naleznete na obrázku \ref{fig:PPSB-TH_VISUAL}.\newline
 
-\section*{Senzorika}
+\section{Senzorika}
 PROTOPlant primárně podporuje 2 typy senzorů. 
 DS18B20 pro měření teploty a DHT22 schopné měřit vlhkost i teplotu.
 DálePROTOPlant podporuje připojení senzorů vlhkosti půdy pracujících na bázi elektrické vodivosti.
 
-\subsection*{DS18B20}
+\subsection{DS18B20}
 \label{sec:DS18B20}
 Senzory určené pro měření teploty. 
 Komunikují po sběrnici OneWire (více v~\cite{DS18B20}, str. 4) vytvořené společností Maxim Integrated.
@@ -137,11 +136,11 @@ Jsou určeny pro teplotní rozsahy -55~\degree C až +125~\degree C.
 V~měřícím rozsahu -10~\degree C až +85~\degree C jsou schopny měřit s~přesností na $\pm0,5$~\degree C.
 K~PPCU je možno připojit až 30 těchto senzorů.
 
-%\subsection*{BME280}
+%\subsection{BME280}
 %\label{sec:BME280}
 %To be done.
 
-\subsection*{DHT22}
+\subsection{DHT22}
 \label{sec:DHT22}
 Čidla, která měří vzdušnou vlhkost i teplotu.
 Jejich přesnost je $\pm2\%$ relativní vlhkosti a $\pm$0,5\degree C.
