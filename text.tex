@@ -22,6 +22,8 @@
     basicstyle=\footnotesize,% basic font setting
 }
 
+\hyphenation{PROTOPlant}
+
 \addbibresource{text.bib}
 \nocite{*}
 
@@ -85,12 +87,6 @@ greenhouse automation, ESP32, PROTOPlant, automation, open-source hardware, open
 % Jednotlive moduly PROTOPlantu
 \input{CHAPTERS/MODULES.tex}
 
-% Tistene spoje a elektronika
-\input{CHAPTERS/ELECTRONICS_and_PCBs.tex}
-
-% Podrobny popis softwaru
-\input{CHAPTERS/SOFTWARE.tex}
-
 % Popis funkci, aneb „Co to vsechno umi?"
 \input{CHAPTERS/POPIS_FUNKCI.tex}
 
@@ -109,6 +105,16 @@ greenhouse automation, ESP32, PROTOPlant, automation, open-source hardware, open
 % Zaver prace
 \input{CHAPTERS/ZAVER.tex}
 
+\chapter*{Přílohy}
+\addcontentsline{toc}{chapter}{Přílohy}
+% Tistene spoje a elektronika
+\input{CHAPTERS/ELECTRONICS_and_PCBs.tex}
+
+% Podrobny popis softwaru
+\input{CHAPTERS/SOFTWARE.tex}
+
+\chapter*{Přílohy}
+\addcontentsline{toc}{chapter}{Příloha E: Obrazové přílohy}
 % Prilohy
 \input{CHAPTERS/PRILOHY.tex}
 
