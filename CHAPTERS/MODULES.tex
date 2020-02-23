@@ -2,7 +2,7 @@
 PROTOPlant je modulární systém - není tedy jedním velkým celkem se všemi funkcemi přímo zaintegrovanými.
 V~této kapitole se zaměřím na podrobný popis jednotlivých modulů.
 
-\section{PPCU -- PROTOPlant Control Unit}
+\section{Řídící jednotka (PPCU)}
 PPCU, neboli řídící jednotka je hlavním modulem celého systému.
 Samotné PPCU tvoří elektroinstalační box s~krytím IP65.
 Na přední části se nachází ovládací panel s~LCD displejem a ovládacími tlačítky.
@@ -56,28 +56,28 @@ je nejjednodušší metoda napájení.
 Každý z~modulů je připojen vlastním kabelem přímo k~napájecímu zdroji.
 Primárně je určena pro bezdrátovou komunikaci mezi jednotlivými moduly. 
 
-\subsection{CIPM - Komunikační a napájecí modul}
+\subsection{Komunikační a napájecí modul - CIPM}
 \label{subsec:CIPM}
 Tento modul funguje jako propojovací uzel mezi řídící jednotkou a všemi přídavnými moduly.
 Dále slouží pro připojení externího napájení pro jednotlivé další moduly (viz \autoref{subpar:suplyingViaCIPM}).
 
-\subsection{SHSM - Modul měření vlhkosti půdy}
+\subsection{Modul měření vlhkosti půdy - SHSM}
 \label{subsec:SHSM}
 Modul určený pro připojení senzorů měřících vlhkost půdy.
 Tento modul je zatím stále ve stádiu konceptu.
 
-\subsection{SEM - Modul rozšíření senzoriky}
+\subsection{Modul rozšíření senzoriky - SEM}
 \label{subsec:SEM}
 Modul určený pro zvýšení pokrytí prostoru skleníku přidáním dalších enviromentálních senzorů.
 Pro malé, případně středně velké skleníky není tento modul potřebný. 
 Ve velkých sklenících již své uplatnění najde vzhledem k~tomu, že je vybaven vlastní řídící elektronikou a jediným omezením je dosah zvoleného způsobu komunikace s~řídící jednotkou.
 
-\subsection{PCM - Modul řízení čerpadel}
+\subsection{Modul řízení čerpadel - PCM}
 \label{subsec:PCM}
 Valná většina zahrádkářů má pro svůj skleník i nádrž na vodu.
 Tento modul je určen pro sledování hladiny vody v~ní a případné spínání čerpadla, které má za úkol v~nádrži vodu doplňovat.
 
-\subsection{RCM - Modul vzdáleného ovládání}
+\subsection{Modul vzdáleného ovládání - RCM}
 \label{subsec:RCM}
 Byl vytvořen pro zjednodušení nastavení a ovládání PROTOPlantu.
 Skládá se ze dvou částí. 
