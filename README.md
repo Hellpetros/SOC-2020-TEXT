@@ -1,6 +1,7 @@
 # SOČ 2020 - TEXT PRÁCE „AUTOMATICKÝ SKLENÍK“
 Repozitář obsahuje zdrojový kód textu práce „Automatický skleník“.
 Toto dílo je chráněno licencí CC BY-NC-SA 4.0.
+
 Petr Štourač 2020.
 
 
