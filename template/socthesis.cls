@@ -34,12 +34,12 @@
 %\captionsetup[listedequation]{labelformat = parens}
 
 %% hyperref \autoref nazvy
-\def\chapterautorefname{Kapitola}
-\def\sectionautorefname{Kapitola}
-\def\subsectionautorefname{Kapitola}
-\def\sectionautorefname{Kapitola}
-\def\figureautorefname{Obrázek}
-\def\tableautorefname{Tabulka}
+\def\chapterautorefname{kapitola}
+\def\sectionautorefname{kapitola}
+\def\subsectionautorefname{kapitola}
+\def\sectionautorefname{kapitola}
+\def\figureautorefname{obrázek}
+\def\tableautorefname{oabulka}
 
 %%%%%% PROMĚNNÉ
 \def\titlecz#1{\def\@titlecz{#1}}
