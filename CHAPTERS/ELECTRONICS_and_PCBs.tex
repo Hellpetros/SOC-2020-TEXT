@@ -1,5 +1,5 @@
 \chapter{Elektronika a~tištěné spoje}
-Všechny prototypy základních desekPROTOPlantu byly založeny na univerzálních tištěných spojích. Vzhledem k~tomu, že jsem po stránce vzhledu i funkčnosti nebyl s~takovýmto provedením spokojen, rozhodl jsem se nechat vyrobit vlastní tištěné spoje pro základní desku i senzorové moduly.
+Všechny prototypy základních desek PROTOPlantu byly založeny na univerzálních tištěných spojích. Vzhledem k~tomu, že jsem po stránce vzhledu i funkčnosti nebyl s~takovýmto provedením spokojen, rozhodl jsem se nechat vyrobit vlastní tištěné spoje pro základní desku i senzorové moduly.
 Díky tomuto jsem se naučil návrhu tištěných spojů a~tvorbě výrobních podkladů v~programu Autodesk EAGLE.
 
 \section{PPMB32 -- Základní deska}
@@ -35,12 +35,14 @@ Kompletní, samostatná deska.
 Je přímo osazena procesorem ESP32-WROOM32D i programátorem CP2102N. 
 Má nižší profil, tudíž je možné ji použít i v~menších prostorech.
 Integrovaný programátor lze s~pomocí jumperů odpojit a~přes programovací piny připojit externí. Tuto verzi jsem nazval PPMB32-F (označení F od anglického slova Full -- kompletní).
+Zároveň je optimalizovaná pro strojní osazování.
 
 \paragraph{PPMB32-E}
-Vzhledem k~tomu, že jePROTOPlant veřejně dostupný, nebyl jsem si jist, zda by kompletní osazení takto velké desky zvládl i laik. 
+Vzhledem k~tomu, že je PROTOPlant veřejně dostupný, nebyl jsem si jist, zda by kompletní osazení takto velké desky zvládl i laik. 
 Napadlo mě proto vytvořit i druhou desku, na které by byly osazeny dutinkové lišty pro vsazení vývojové ESP32 DevKitC. 
 Odpadla by tedy nutnost kompletně osazovat sekci Control. 
 Tuto verzi jsem nazval PPMB32-E (označení E od anglického slova Easy -- jednoduchý).
+Je určena primárně pro ruční osazování.
 
 \paragraph{Sekce Control}
 Jak již bylo zmíněno, tato část desky zahrnuje modul procesoru ESP32-WROOM32D a~programovací obvod. 
@@ -126,7 +128,7 @@ Vizualizace naleznete na obrázku \ref{fig:PPSB-TH_VISUAL}.\newline
 \section{Senzorika}
 PROTOPlant primárně podporuje 3 typy senzorů. 
 DS18B20 pro měření vzdušné teploty, DHT22 schopné měřit vlhkost i teplotu vzduchu a~senzory pro měření vlhkosti půdy.
-DálePROTOPlant podporuje připojení senzorů vlhkosti půdy pracujících na bázi elektrické vodivosti.
+Dále PROTOPlant podporuje připojení senzorů vlhkosti půdy pracujících na bázi elektrické vodivosti.
 
 \subsection{DS18B20}
 \label{sec:DS18B20}
