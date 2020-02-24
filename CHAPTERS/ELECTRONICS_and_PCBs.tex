@@ -124,8 +124,8 @@ Narozdíl od PPSB-T tyto desky nelze řetězit.
 Vizualizace naleznete na obrázku \ref{fig:PPSB-TH_VISUAL}.\newline
 
 \section{Senzorika}
-PROTOPlant primárně podporuje 2 typy senzorů. 
-DS18B20 pro měření teploty a DHT22 schopné měřit vlhkost i teplotu.
+PROTOPlant primárně podporuje 3 typy senzorů. 
+DS18B20 pro měření vzdušné teploty, DHT22 schopné měřit vlhkost i teplotu vzduchu a senzory pro měření vlhkosti půdy.
 DálePROTOPlant podporuje připojení senzorů vlhkosti půdy pracujících na bázi elektrické vodivosti.
 
 \subsection{DS18B20}
@@ -140,6 +140,9 @@ K~PPCU je možno připojit až 30 těchto senzorů.
 %\label{sec:BME280}
 %To be done.
 
+\subsection{Senzory půdní vlhkosti}
+\fxnote[author=PŠ]{Dopíšu během pondělka}
+
 \subsection{DHT22}
 \label{sec:DHT22}
 Čidla, která měří vzdušnou vlhkost i teplotu.
@@ -148,5 +151,7 @@ Opakovatelnost měření je poté $\pm$1\% relativní vlhkosti a $\pm$0,2\degree
 Tyto senzory komunikují jednosběrnicově, není tedy možno je řetězit.
 K~PPCU je možno připojit těchto senzorů až 6.
 Více viz \cite{DHT22}.
+
+Do budoucna zvažuji přechod na senzory AM2321 \cite{AM2321} vzhledem k tomu, že narozdíl od DHT22 dokáží komunikovat po sběrnici I\superscript{2}C (viz kapitola \ref{sec:I2C_comm}).
 
 \newpage
