@@ -91,7 +91,7 @@ Jejich napájecí rozsahy jsou rozepsány v~tabulce \ref{fig:powerSourceCharsVNH
 \paragraph{Sekce SIN}
 Sekce s~piny pro připojení jednotlivých senzorů. 
 S~výjimkou ochranných rezistorů je složena pouze z~pinheadů.
-Jednotlivé piny jsou pro lepší přehlednost označeny přímo na desce a~podrobněji popsány v~jejím datasheetu. 
+Jednotlivé piny jsou pro lepší přehlednost označeny přímo na desce a~podrobněji popsány v~jejím datasheetu (viz kapitola \ref{sec:DPS_datasheets}). 
 
 \paragraph{Sekce POUT} 
 Piny pro připojení napájení dalších periferií, modulů, či senzorů.
@@ -101,11 +101,11 @@ Piny jsou rozděleny na části připojené k~subokruhům A1 a~A2 s~napětím 3,
 \paragraph{Sekce PanCon}
 Dvanáctipinový konektor PanCon slouží pro připojení kabelu od hlavního řídícího panelu. 
 Samotný konektor má dva zemnící vývody, dva napájecí (1~x~5~V~a~1~x~3,3~V), dva vývody sběrnice I\textsuperscript{2}C a~6 vývodů pro připojení tlačítek a~přepínačů.
-Přesnější zapojení je opět k~dispozici v~datasheetech jednotlivých desek.
+Přesnější zapojení je opět k~dispozici v~datasheetech jednotlivých desek (viz kapitola \ref{sec:DPS_datasheets}).
 
 \section{PPSB -- Desky se senzory teploty a~vlhkosti}
 Desky osazené senzory DS18B20\cite{DS18B20} (PPSB-T) a~DHT22\cite{DHT22} (PPSB-TH).
-Pro oba typy desek jsem navrhl a~s~pomocí 3D tisku vyrobil vlastní krabičky.\newline
+Pro oba typy desek jsem navrhl a~s~pomocí 3D tisku vyrobil vlastní krabičky viz příloha \ref{fig:PPSB-T_cases}.\newline
 
 \noindent\B{PPSB-T} -- deska osazená jedním senzorem DS18B20 \cite{DS18B20} zapojeným v~režimu parazitního napájení (viz \autoref{sec:DS18B20}).
 V~něm je senzor napájen přímo ze sběrnice OneWire, stačí mu tedy pro připojení pouze dva kabely (více v~\cite{DS18B20}).
@@ -124,6 +124,10 @@ Vizualizaci desky naleznete na obrázku \ref{fig:PPSB-T_VISUAL}.\newline \newlin
 Více o~tomto senzoru naleznete v~kapitole \ref{sec:DHT22}.
 Narozdíl od PPSB-T tyto desky nelze řetězit.
 Vizualizace naleznete na obrázku \ref{fig:PPSB-TH_VISUAL}.\newline
+
+\section{Datasheety DPS PROTOPlantu}
+\label{sec:DPS_datasheets}
+Další informace k jednotlivým DPS vytvořeným v rámci PROTOPlantu budou k dispozici v jejích datasheetech, které budou po jejich dokončení (předpokládám 16.~3.~2020) zveřejněny na webu \textit{\url{www.protoplant.cz}}.
 
 \section{Senzorika}
 PROTOPlant primárně podporuje 3 typy senzorů. 

@@ -6,11 +6,3 @@ Cílem práce je vytvořit univerzální a dostupný systém pro automatizaci sk
 Tento projekt jsem nazval [PROTOPlant](https://protoplant.protocon.cz/).
 
 [LINK TO TABLE WITH BUDGET](https://docs.google.com/spreadsheets/d/1ZI8_D_LJPej7IoSE3QkqMBanPijJOcWTwICOPSyZP_c/edit#gid=902149754)
-
-## TODO list
-
-- Dodělat podklady k deskám. - URGENT
-- Datasheety k deskám!!
-- Dořešit nákupy. - URGENT
-- Nechat vyrobit desky - URGENT
-
