@@ -1,5 +1,5 @@
 \chapter{Jednotlivé moduly PROTOPlantu}
-PROTOPlant je modulární systém - není tedy jedním velkým celkem se všemi funkcemi přímo zaintegrovanými.
+PROTOPlant je modulární systém -- není tedy jedním velkým celkem se všemi funkcemi přímo zaintegrovanými.
 V~této kapitole se zaměřím na podrobný popis jednotlivých modulů.
 
 \section{Řídící jednotka (PPCU)}
@@ -16,12 +16,12 @@ Na vývoji těchto modulů se zatím stále pracuje.
 Těchto modulů existuje hned několik:
 
 \begin{itemize}
-    \item Komunikační a napájecí modul (CIPM - Communication Interface and Power Module -- modul potřebný pro drátové připojení ostatních modulů, viz \autoref{subsec:CIPM})
-    \item Napájecí rozdělovač (PSpl - Power Splitter)
-    \item Modul určený pro měření půdní vlhkosti (SHSM - Soil Humidity Sensorics Module -- modul vybavený senzory pro měření vlhkosti půdy, viz \autoref{subsec:SHSM})
-    \item Modul rozšíření pokrytí senzorikou (SEM - Sensorics Expansion Module -- modul pro zvýšení počtu senzorů připojených k~PROTOPlantu, viz \autoref{subsec:SEM})
-    \item Modul ovládání čerpadel (PCM - Pump Control Module -- modul pro sledování hladiny vody v~nádrži a ovládání čerpadla, viz \autoref{subsec:PCM})
-    \item Modul vzdáleného ovládání (RCM - Remote Control Module -- modul pro připojení vzdáleného ovládacího panelu, viz \autoref{subsec:RCM})
+    \item Komunikační a napájecí modul (CIPM -- Communication Interface and Power Module -- modul potřebný pro drátové připojení ostatních modulů, viz \autoref{subsec:CIPM})
+    \item Napájecí rozdělovač (PSpl -- Power Splitter)
+    \item Modul určený pro měření půdní vlhkosti (SHSM -- Soil Humidity Sensorics Module -- modul vybavený senzory pro měření vlhkosti půdy, viz \autoref{subsec:SHSM})
+    \item Modul rozšíření pokrytí senzorikou (SEM -- Sensorics Expansion Module -- modul pro zvýšení počtu senzorů připojených k~PROTOPlantu, viz \autoref{subsec:SEM})
+    \item Modul ovládání čerpadel (PCM -- Pump Control Module -- modul pro sledování hladiny vody v~nádrži a ovládání čerpadla, viz \autoref{subsec:PCM})
+    \item Modul vzdáleného ovládání (RCM -- Remote Control Module -- modul pro připojení vzdáleného ovládacího panelu, viz \autoref{subsec:RCM})
 \end{itemize}
 Zjednodušené schéma zapojení a funkce jednotlivých modulů naleznete na \autoref{fig:add-MODULES}.
 
@@ -56,28 +56,28 @@ je nejjednodušší metoda napájení.
 Každý z~modulů je připojen vlastním kabelem přímo k~napájecímu zdroji.
 Primárně je určena pro bezdrátovou komunikaci mezi jednotlivými moduly. 
 
-\subsection{Komunikační a napájecí modul - CIPM}
+\subsection{Komunikační a napájecí modul -- CIPM}
 \label{subsec:CIPM}
 Tento modul funguje jako propojovací uzel mezi řídící jednotkou a všemi přídavnými moduly.
 Dále slouží pro připojení externího napájení pro jednotlivé další moduly (viz \autoref{subpar:suplyingViaCIPM}).
 
-\subsection{Modul měření vlhkosti půdy - SHSM}
+\subsection{Modul měření vlhkosti půdy -- SHSM}
 \label{subsec:SHSM}
 Modul určený pro připojení senzorů měřících vlhkost půdy.
 Tento modul je zatím stále ve stádiu konceptu.
 
-\subsection{Modul rozšíření senzoriky - SEM}
+\subsection{Modul rozšíření senzoriky -- SEM}
 \label{subsec:SEM}
 Modul určený pro zvýšení pokrytí prostoru skleníku přidáním dalších enviromentálních senzorů.
 Pro malé, případně středně velké skleníky není tento modul potřebný. 
 Ve velkých sklenících již své uplatnění najde vzhledem k~tomu, že je vybaven vlastní řídící elektronikou a jediným omezením je dosah zvoleného způsobu komunikace s~řídící jednotkou.
 
-\subsection{Modul řízení čerpadel - PCM}
+\subsection{Modul řízení čerpadel -- PCM}
 \label{subsec:PCM}
 Valná většina zahrádkářů má pro svůj skleník i nádrž na vodu.
 Tento modul je určen pro sledování hladiny vody v~ní a případné spínání čerpadla, které má za úkol v~nádrži vodu doplňovat.
 
-\subsection{Modul vzdáleného ovládání - RCM}
+\subsection{Modul vzdáleného ovládání -- RCM}
 \label{subsec:RCM}
 Byl vytvořen pro zjednodušení nastavení a ovládání PROTOPlantu.
 Skládá se ze dvou částí. 

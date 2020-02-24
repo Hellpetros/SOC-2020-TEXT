@@ -1,6 +1,6 @@
 \chapter{Software základní desky}
 Tato kapitola se zaměřuje na software základní desky PROTOPlantu a detailně popisuje jeho funkci.
-Na software ostatních modulů se zaměřuje následující kapitola \ref{chap:moduleSoftware}.
+Na software ostatních modulů se zaměřuje následu\-jí\-cí kapitola \ref{chap:moduleSoftware}.
 
 %\paragraph{Blokové schéma funkce softwaru základní desky}
 %Schéma funkce softwaru základní desky je shrnuto blokovým diagramem XXX.
@@ -60,7 +60,7 @@ Zařízení připojené jako v~režimu master tuto adresu nepotřebuje, vzhledem
 Za klidového stavu (neprobíhá žádná komunikace) jsou obě linky (SDA i SCL) připojeny nastaveny na HIGH.
 Jakmile chce master zahájit komunikaci, vyšle takzvaný startovní signál, po kterém následuje adresa daného zařízení, jejíž nultý bit určí, zda chce master číst, nebo zapisovat.
 Dále následují datové bity.
-Jakmile jsou všechna data přenesena, vyšle master stop signál, čímž ukončí komunikaci a sběrnice se vrátí do klidu.
+Jakmile jsou všechna data přene\-se\-na, vyšle master stop signál, čímž ukončí komunikaci a sběrnice se vrátí do klidu.
 Rychlost celého přenosu určuje pulsování linky CLK.
 Celý proces názorně zobrazuje obrázek \ref{fig:I2C-protocol}.
 
@@ -87,9 +87,9 @@ Je vhodná primárně pro malé skleníky v oblastech, kde nehrozí zarušení s
 Tento způsob komunikace je zatím stále ve vývoji.
 
 \section{Kabelová komunikace a RS-485}
-Kabelová komunikace probíhá přes tzv. UART (Universal Asynchronnous Receiver and Transmitter - univerzální asynchronní přijímač a vysílač).
-PROTOPlant využívá průmyslový standard RS-485 umožňující komunikaci s~pomocí dvojlinky.
-Opět je zde uplatněn princip master - slave (řídící jednotka je master, ostatní moduly slave).
+Kabelová komunikace probíhá přes tzv. UART (Universal Asynchronnous Receiver and Transmitter -- univerzální asynchronní přijímač a vysílač).
+PROTO\-Plant využívá průmyslový standard RS-485 umožňující komunikaci s~pomocí dvojlinky.
+Opět je zde uplatněn princip master -- slave (řídící jednotka je master, ostatní moduly slave).
 Pro tento způsob komunikace existuje několik protokolů, pro příklad velmi často používaný ModBus, nebo nedávno vytvořený JANUS\cite{JANUS}, který používám. 
 Více o~principu RS-485 a samotném protokolu v~\cite[21-25]{JANUS}
 

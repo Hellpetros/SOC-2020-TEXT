@@ -11,10 +11,10 @@ Z~důvodu přehlednosti jsem desku rozdělil do několika částí:
 \begin{itemize}
     \item Control (ESP32-WROOM32D a programátor)
     \item H-power (napájecí obvod a H-můstky)
-    \item SIN (SensorIN - piny pro připojení senzorů)
-    \item POUT (PowerOUT - výstup pro napájení dalších periferií)
-    \item PanCon (PanelConnect - piny pro připojení tlačítek a displeje na ovládacím panelu)
-    \item SelfProt (SelfProtection - senzor teploty a piny pro připojení vnitřního detektoru vody)
+    \item SIN (SensorIN -- piny pro připojení senzorů)
+    \item POUT (PowerOUT -- výstup pro napájení dalších periferií)
+    \item PanCon (PanelConnect -- piny pro připojení tlačítek a displeje na ovládacím panelu)
+    \item SelfProt (SelfProtection -- senzor teploty a piny pro připojení vnitřního detektoru vody)
 \end{itemize} 
 
 Samotná základní deska má dvě verze. Jejich rozdíly jsou vysvětleny níže.
@@ -34,17 +34,17 @@ Pokud teplota základní desky překročí 50~\degree C, automaticky se přeruš
 Kompletní, samostatná deska. 
 Je přímo osazena procesorem ESP32-WROOM32D i programátorem CP2102N. 
 Má nižší profil, tudíž je možné ji použít i v~menších prostorech.
-Integrovaný programátor lze s~pomocí jumperů odpojit a přes programovací piny připojit externí. Tuto verzi jsem nazval PPMB32-F (označení F od anglického slova Full - kompletní).
+Integrovaný programátor lze s~pomocí jumperů odpojit a přes programovací piny připojit externí. Tuto verzi jsem nazval PPMB32-F (označení F od anglického slova Full -- kompletní).
 
 \paragraph{PPMB32-E}
 Vzhledem k~tomu, že jePROTOPlant veřejně dostupný, nebyl jsem si jist, zda by kompletní osazení takto velké desky zvládl i laik. 
 Napadlo mě proto vytvořit i druhou desku, na které by byly osazeny dutinkové lišty pro vsazení vývojové ESP32 DevKitC. 
 Odpadla by tedy nutnost kompletně osazovat sekci Control. 
-Tuto verzi jsem nazval PPMB32-E (označení E od anglického slova Easy - jednoduchý).
+Tuto verzi jsem nazval PPMB32-E (označení E od anglického slova Easy -- jednoduchý).
 
 \paragraph{Sekce Control}
 Jak již bylo zmíněno, tato část desky zahrnuje modul procesoru ESP32-WROOM32D a programovací obvod. 
-Ten se skládá z~převodníku USB-UART CP2102N, tranzistorů SS8050-G (sloužících pro reset procesoru), indikačních LED diod a mikro USB konektoru. 
+Ten se skládá z~převod\-ní\-ku USB-UART CP2102N, tranzistorů SS8050-G (sloužících pro reset procesoru), indikačních LED diod a mikro USB konektoru. 
 Nachází se zde i jumper pro přepínání mezi externím programátorem a programátorem přímo na desce.
 
 \paragraph{Sekce H-power}
@@ -101,7 +101,7 @@ Dvanácti-pinový konektor PanCon slouží pro připojení kabelu od hlavního �
 Samotný konektor má dva zemnící vývody, dva napájecí (1~x~5~V~a~1~x~3,3~V), dva vývody sběrnice I\textsuperscript{2}C a 6 vývodů pro připojení tlačítek a přepínačů.
 Přesnější zapojení je opět k~dispozici v~datasheetech jednotlivých desek.
 
-\section{PPSB - Desky se senzory teploty a vlhkosti}
+\section{PPSB -- Desky se senzory teploty a vlhkosti}
 Desky osazené senzory DS18B20\cite{DS18B20} (PPSB-T) a DHT22\cite{DHT22} (PPSB-TH).
 Pro oba typy desek jsem navrhl a s~pomocí 3D tisku vyrobil vlastní krabičky.\newline
 
