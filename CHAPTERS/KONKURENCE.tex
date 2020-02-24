@@ -17,14 +17,28 @@ Systémy spadající do této kategorie vyznačují se především tím, že js
 Tato řešení jsou většinou řízena pomocí PLC, tedy průmyslových kontrolérů, která jsou povětšinou velmi drahá a náročná na programování.
 Dodávají je společnosti, které se touto problematikou přímo zabývají a systémy dodávají na zakázku velkým podnikům.
 
-\section{„Kutilská“ řešení}
+\section{„Kutilská“, neboli amatérská řešení}
 Jsou vytvořena lidmi, kteří elektrotechnice rozumí a mají čas na to si s~elektronikou takto hrát.
 Taková řešení většinou jsou:
 \begin{itemize}
     \item neuniverzální, lidé si je vytváří přímo pro sebe
     \item časově nákladná na výrobu
-    \item nevhodná pro osoby, které nemají zkušenosti v~elektrotechnice 
+    \item nevhodná pro osoby, které nemají zkušenosti v~elektrotechnice a programování
 \end{itemize}
+
+Lze je sice nazvat levnými, ovšem na úkor jejich funkčnosti.
+
+Pro konkrétní porovnání mohu uvést dva příklady:
+\subsection{Zavlažovací systém skleníku \cite{ARDUGREENHOUSE}}
+Tento systém založený na Arduinu je dle proklamací autora schopen:
+\begin{itemize}
+    \item 
+\end{itemize}
+
+\subsection{RaspberryPI greenhouse \cite{RPIGREENHOUSE}}
+Projekt založený na RaspberryPI. 
+Dokáže měřit teplotu, vlhkost,s automaticky zavlažovat rostliny a otevírat okna.
+Toho je ovšem dosaženo naprosto amatérským provedením.
 
 \section{Srovnání s~PROTOPlantem}
 Pro srovnání PROTOPlantu a těchto dvou kategorií jsem sestavil tabulku \ref{tab:COMPARATION}.
@@ -49,7 +63,8 @@ Pro srovnání PROTOPlantu a těchto dvou kategorií jsem sestavil tabulku \ref{
 \end{table}
 
 \noindent\B{Dodání} -- udává způsoby, jak si lidé mohou dané řešení opatřit.
-Průmyslová, ani „kutilská“ řešení nejsou k dostání jako již hotový produkt, zatímco PROTO\-Plant \B{ano}. \newline
+„Kutilská“ řešení nejsou k dostání jako již hotový produkt, zatímco PROTO\-Plant \B{ano}. \newline
+Průmyslová řešení jsou většinou již k dostání jako hotové produkty.
 
 \noindent\B{Cena} -- srovnání cen jednotlivých řešení.
 Průmyslová řešení jsou komplexní, ovšem velmi drahá.
@@ -70,5 +85,11 @@ PROTOPlant nativně podporuje Wi-Fi a Bluetooth a je možno jej rozšířit o po
 PLC jsou velmi drahá a jejich programování vyžaduje školení.
 Arduino je levné, ovšem jeho funkce jsou velmi omezené.
 ESP32 je výkonný procesor za rozumnou cenu, který nativně podporuje Wi-Fi a Bluetooth. \newline
+
+\section{Sumarizace}
+Nabídka řešení v tomto oboru je velmi chudá.
+Na jedné straně stojí průmyslová řešení, která jsou drahá a dodávají se primárně do skleníků velkých zemědělských firem.
+Na opačném břehu jsou řešení amatérská. 
+Ta jsou ovšem buďto naprosto nepoužitelná v běžně velkém skleníku (primárně je uživatelé vyrábí pro malá pařeniště), nebo neuniverzální.
 
 \newpage
