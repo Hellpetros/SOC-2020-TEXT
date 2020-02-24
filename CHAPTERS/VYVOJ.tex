@@ -4,7 +4,7 @@ Vývoj byl započat začátkem roku 2018.
 Za tu dobu vyšlo již několik verzí softwaru i hardwaru.
 
 \section{PROTOPlant 1.0 až 4.0 (tzv. legacy verze)}
-Původní verze PROTOPlantu byly celkem 4 stabilní a několik vývojových.
+Původní verze PROTOPlantu byly celkem 4 stabilní a~několik vývojových.
 Tyto 4 stabilní verze jsou ve zkratce popsány níže.
 
 \subsection{Verze 1.0}
@@ -12,21 +12,21 @@ Nejstarší funkční verze PROTOPlantu, založená na Arduinu DUE.
 Jeho software tvořilo jedno, stále se opakující vlákno.
 Nevýhodou tohoto postupu bylo nepřesné časování některých úkonů způsobeném používáním blokujících operací.
 Tato verze byla pouze shluk kabelů, přes které byly k~Arduinu připojeny jednotlivé moduly senzorů.
-Byla schopna pouze měřit teplotu a s~pomocí relátek ovládat aktuátory, které následně otevíraly, nebo zavíraly okna.
+Byla schopna pouze měřit teplotu a~s~pomocí relátek ovládat aktuátory, které následně otevíraly, nebo zavíraly okna.
 Inverze polarity napájení byla řešena použitím třech relé.
-Dvou, která křížově spínala kladný pól napájení aktuátorů a třetího, který připojoval zemnící vodič.
-Toto zapojení nebylo zcela ideální, vzhledem k~nutnosti použití tří relé a tedy i velkému úbytku napětí.
+Dvou, která křížově spínala kladný pól napájení aktuátorů a~třetího, který připojoval zemnící vodič.
+Toto zapojení nebylo zcela ideální, vzhledem k~nutnosti použití tří relé a~tedy i velkému úbytku napětí.
 Použité Arduino bohužel další vývoj nepřežilo.
 
 \subsection{Verze 2.0}
 Největší změnou oproti předchozí verzi byl přechod z~Arduina na ESP32 devkitC.
-Software byl kompletně přepsán a blokující funkce odstraněny.
+Software byl kompletně přepsán a~blokující funkce odstraněny.
 Díky tomu běžel software mnohem plynuleji.
 Co se týče hardwaru, tato verze již používala první prototyp základní desky, který byl osazen na univerzálním tištěném spoji.
-Zároveň jsem přidal podporu LCD znakového displaye, na který se vypisovaly naměřené hodnoty ze senzorů a různé stavové hlášky.
+Zároveň jsem přidal podporu LCD znakového displaye, na který se vypisovaly naměřené hodnoty ze senzorů a~různé stavové hlášky.
 Během vývoje této verze jsem také systém začal nazývat PROTOPlant.
 
-\subsection{Verze 3.0 a další}
+\subsection{Verze 3.0 a~další}
 Tato verze byla v~minulém roce prezentována na okresním kole SOČ.
 Kromě několika prototypů základní desky, které se při jejím vývoji vystřídaly, došlo i~k~mnohým změnám ve funkci celého PROTOPlantu.
 Doposud používaná relé, kterými PROTOPlant spínal aktuátory, bylo nutno nahradit jiným řešením.
@@ -36,15 +36,15 @@ Nakonec jsem objevil H-můstky VNH2SP30.
 Ty umožňují kromě regulace výstupního napětí velmi jednoduše obracet polaritu výstupů.
 Pro zjednodušení zapojení při testování jsem využíval Monster Moto Shield, na kterém jsou tato VNH osazena hned dvě.
 Proto mne napadlo využít druhé VNH jako víceúčelový výstup, ke kterému lze připojit čerpadlo, elektromagnetický ventil, případně jiná zařízení.
-V~softwaru přibyla podpora tlačítek a menu zobrazované na LCD displeji, přes které se dalo měnit nastavení systému za chodu.
+V~softwaru přibyla podpora tlačítek a~menu zobrazované na LCD displeji, přes které se dalo měnit nastavení systému za chodu.
 Dále jsem PROTOPlant uzavřel do průmyslového elektroinstalačního boxu s~krytím IP67.
-Do víka boxu jsem nainstaloval LCD displej a ovládací tlačítka.
+Do víka boxu jsem nainstaloval LCD displej a~ovládací tlačítka.
 \newline
 
 \noindent\B{Verze 3.1} byla další ze stabilních verzí zaměřená primárně na opravu softwarových chyb.
 Tuto verzi jsem v~minulém roce prezentoval v~krajském kole SOČ.
-Menu nastavení bylo přeloženo do češtiny a zrychlena navigace v~něm.
-Dále jsem se zaměřil na větší objektivizaci celého kódu a zvýšení plynulosti běhu systému.
+Menu nastavení bylo přeloženo do češtiny a~zrychlena navigace v~něm.
+Dále jsem se zaměřil na větší objektivizaci celého kódu a~zvýšení plynulosti běhu systému.
 Na ovládací panel jsem nainstaloval červený kryt s~laserem gravírovanými popisky tlačítek.
 \newline
 
@@ -53,12 +53,12 @@ Až na menší změny v~interní elektronice řídící jednotky neznamenala vě
 
 \section{PROTOPlant verze 5.0}
 Při pokračování dalšího vývoje verzemi 4.x jsem dospěl k~závěru, že je na čase změnit způsob, jakým PROTOPlant funguje.
-Rozhodl jsem se tedy kompletně změnit software a přepsat jej celý od začátku.
+Rozhodl jsem se tedy kompletně změnit software a~přepsat jej celý od začátku.
 Hardware se také dočkal velmi výrazných změn.
 
 Dal jsem se tedy do vývoje páté verze PROTOPlantu, v~čemž pokračuji i~nadále.
-Místo vývoje dalších prototypů základních desek jsem se rozhodl navrhnout vlastní tištěné spoje a nechat je vyrábět průmyslově.
-Dále jsem začal používat díly vytištěné na 3D tiskárně (především obaly senzorových desek a úchyty pro elektroniku).
+Místo vývoje dalších prototypů základních desek jsem se rozhodl navrhnout vlastní tištěné spoje a~nechat je vyrábět průmyslově.
+Dále jsem začal používat díly vytištěné na 3D tiskárně (především obaly senzorových desek a~úchyty pro elektroniku).
 Software jsem kompletně změnil tak, aby naplno využíval schopnosti vícejádrového procesoru ESP32.
 
 \newpage

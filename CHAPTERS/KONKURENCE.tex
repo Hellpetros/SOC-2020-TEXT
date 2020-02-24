@@ -14,16 +14,16 @@ Systémy spadající do této kategorie vyznačují se především tím, že js
     \item nedostupná pro běžné zákazníky
 \end{itemize}
 
-Tato řešení jsou většinou řízena pomocí PLC, tedy průmyslových kontrolérů, která jsou povětšinou velmi drahá a náročná na programování.
-Dodávají je společnosti, které se touto problematikou přímo zabývají a systémy dodávají na zakázku velkým podnikům.
+Tato řešení jsou většinou řízena pomocí PLC, tedy průmyslových kontrolérů, která jsou povětšinou velmi drahá a~náročná na programování.
+Dodávají je společnosti, které se touto problematikou přímo zabývají a~systémy dodávají na zakázku velkým podnikům.
 
 \section{„Kutilská“, neboli amatérská řešení}
-Jsou vytvořena lidmi, kteří elektrotechnice rozumí a mají čas na to si s~elektronikou takto hrát.
+Jsou vytvořena lidmi, kteří elektrotechnice rozumí a~mají čas na to si s~elektronikou takto hrát.
 Taková řešení většinou jsou:
 \begin{itemize}
     \item neuniverzální, lidé si je vytváří přímo pro sebe
     \item časově nákladná na výrobu
-    \item nevhodná pro osoby, které nemají zkušenosti v~elektrotechnice a programování
+    \item nevhodná pro osoby, které nemají zkušenosti v~elektrotechnice a~programování
 \end{itemize}
 
 Lze je sice nazvat levnými, ovšem na úkor jejich funkčnosti.
@@ -34,22 +34,22 @@ Tento systém založený na Arduinu je dle proklamací autora schopen:
 \begin{itemize}
     \item otevírat okna
     \item zavlažovat rostliny
-    \item sledovat hladinu vody v nádrži
+    \item sledovat hladinu vody v~nádrži
 \end{itemize}
 
 Co se týče softwaru tohoto řešení, je realizován naprosto amatérsky.
-Autor v něm používá naprosto běžně tzv. blokující funkce, což může v případě, že nastane nějaká mezní situace způsobit i poškození rostlin, či systému samotného.
+Autor v~něm používá naprosto běžně tzv. blokující funkce, což může v~případě, že nastane nějaká mezní situace způsobit i poškození rostlin, či systému samotného.
 
 Dle autorova tvrzení systém funguje, ovšem byl testován pouze na malém stolním pařeništi.
 Samotné provedení považuji za velmi neprofesionální.
 
 \subsection{RaspberryPI greenhouse \cite{RPIGREENHOUSE}}
 Projekt založený na RaspberryPI. 
-Dokáže měřit teplotu, vlhkost,s automaticky zavlažovat rostliny a otevírat okna.
+Dokáže měřit teplotu, vlhkost,s automaticky zavlažovat rostliny a~otevírat okna.
 Toho je ovšem dosaženo naprosto amatérským provedením.
 
 \section{Srovnání s~PROTOPlantem}
-Pro srovnání PROTOPlantu a těchto dvou kategorií jsem sestavil tabulku \ref{tab:COMPARATION}.
+Pro srovnání PROTOPlantu a~těchto dvou kategorií jsem sestavil tabulku \ref{tab:COMPARATION}.
 
 \begin{table}[h]
     \centering
@@ -66,13 +66,13 @@ Pro srovnání PROTOPlantu a těchto dvou kategorií jsem sestavil tabulku \ref{
     \textbf{Open-source} & Ne                         & Většinou ano               & Ano                                                                                                   \\ \bottomrule    
     \end{tabular}%
     }
-    \caption{Tabulka srovnání PROTOPlantu a jiných řešení.}
+    \caption{Tabulka srovnání PROTOPlantu a~jiných řešení.}
     \label{tab:COMPARATION}
 \end{table}
 
 \noindent\B{Dodání} -- udává způsoby, jak si lidé mohou dané řešení opatřit.
-„Kutilská“ řešení nejsou k dostání jako již hotový produkt, zatímco PROTO\-Plant \B{ano}. \newline
-Průmyslová řešení jsou většinou již k dostání jako hotové produkty.
+„Kutilská“ řešení nejsou k~dostání jako již hotový produkt, zatímco PROTO\-Plant \B{ano}. \newline
+Průmyslová řešení jsou většinou již k~dostání jako hotové produkty.
 
 \noindent\B{Cena} -- srovnání cen jednotlivých řešení.
 Průmyslová řešení jsou komplexní, ovšem velmi drahá.
@@ -86,18 +86,18 @@ Naopak průmyslová řešení mnohdy vyžadují proškolení personálu.
 
 \noindent\B{Konektivita} -- zda systém disponuje možností propojení s~okolním světem.
 Průmyslovým standardem je dnes ethernet, tudíž většina průmyslových řešení je vybavena právě jím.
-PROTOPlant nativně podporuje Wi-Fi a Bluetooth a je možno jej rozšířit o podporu Ethernetu.
+PROTOPlant nativně podporuje Wi-Fi a~Bluetooth a~je možno jej rozšířit o~podporu Ethernetu.
 „Kutilská“ řešení jsou většinou vybavena Wi-Fi. \newline
 
 \noindent\B{Řízení} -- řídící jednotka daného řešení.
-PLC jsou velmi drahá a jejich programování vyžaduje školení.
+PLC jsou velmi drahá a~jejich programování vyžaduje školení.
 Arduino je levné, ovšem jeho funkce jsou velmi omezené.
-ESP32 je výkonný procesor za rozumnou cenu, který nativně podporuje Wi-Fi a Bluetooth. \newline
+ESP32 je výkonný procesor za rozumnou cenu, který nativně podporuje Wi-Fi a~Bluetooth. \newline
 
 \section{Sumarizace}
-Nabídka řešení v tomto oboru je velmi chudá.
-Na jedné straně stojí průmyslová řešení, která jsou drahá a dodávají se primárně do skleníků velkých zemědělských firem.
+Nabídka řešení v~tomto oboru je velmi chudá.
+Na jedné straně stojí průmyslová řešení, která jsou drahá a~dodávají se primárně do skleníků velkých zemědělských firem.
 Na opačném břehu jsou řešení amatérská. 
-Ta jsou ovšem buďto naprosto nepoužitelná v běžně velkém skleníku (primárně je uživatelé vyrábí pro malá pařeniště), nebo neuniverzální.
+Ta jsou ovšem buďto naprosto nepoužitelná v~běžně velkém skleníku (primárně je uživatelé vyrábí pro malá pařeniště), nebo neuniverzální.
 
 \newpage
