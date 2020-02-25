@@ -52,29 +52,6 @@
 \def\placefooter#1{\def\@placefooter{#1}}
 
 \RequirePackage{xstring}
-\newcommand{\field}[1]{%
-\IfStrEqCase{#1}{
-    {1}{\def\@field{1. Matematika a~statistika}}
-    {2}{\def\@field{2. Fyzika}}
-    {3}{\def\@field{3. Chemie}}
-    {4}{\def\@field{4. Biologie}}
-    {5}{\def\@field{5. Geologie, geografie}}
-    {6}{\def\@field{6. Zdravotnictví}}
-    {7}{\def\@field{7. Zemědělství, potravinářství, lesní a~vodní hospodářství}}
-    {8}{\def\@field{8. Ochrana a~tvorba životního prostředí}}
-    {9}{\def\@field{9. Strojírenství, hutnictví, doprava a~průmyslový design}}
-    {10}{\def\@field{10. Elektrotechnika, elektronika a~telekomunikace}}
-    {11}{\def\@field{11. Stavebnictví, architektura a~design interiérů}}
-    {12}{\def\@field{12. Tvorba učebních pomůcek, didaktická technologie}}
-    {13}{\def\@field{13. Ekonomika a~řízení}}
-    {14}{\def\@field{14. Pedagogika, psychologie, sociologie a~problematika volného času}}
-    {15}{\def\@field{15. Teorie kultury, umění a~umělecké tvorby}}
-    {16}{\def\@field{16. Historie}}
-    {17}{\def\@field{17. Filozofie, politologie a~ostatní humanitní a~společenskovědní obory}}
-    {18}{\def\@field{18. Informatika}}
-  }
-  [Neznámé číslo oboru, upravte \\field{} příkaz!]
-}
 
 \titleen{}
 \region{Jihomoravský}
@@ -87,9 +64,7 @@
 	\voffset = -20mm % posun začátku textu výš
     \enlargethispage{40mm} % zvětší oblast tisku pro tuto stránku
 	\begin{center}
-	    {\large \B{STŘEDOŠKOLSKÁ ODBORNÁ ČINNOST}} \\
-	    \vspace{5mm}
-		\normalsize \B{Obor: \@field} \\
+	    {\large \B{ROČNÍKOVÁ PRÁCE}} \\
 
 		\vspace{40mm}
 
@@ -108,7 +83,7 @@
 	\pagestyle{empty}
     \enlargethispage{40mm} % zvětší oblast tisku pro tuto stránku
 	\begin{center}
-	    {\large \B{STŘEDOŠKOLSKÁ ODBORNÁ ČINNOST}} \\
+	    {\large \B{ROČNÍKOVÁ PRÁCE}} \\
 
 		\vspace{40mm}
 
@@ -126,8 +101,7 @@
 		\large \B{AUTOR} & \large \B{\@author} & \\
 		\large \B{ŠKOLA} & \large \B{\@school} & \\
 		\large \B{KRAJ} & \large \B{\@region} & \\
-		\large \B{ŠKOLITEL} & \large \B{\@mentor} & \\
-		\large \B{OBOR} & \large \B{\@field} & \\
+		\large \B{VEDOUCÍ PRÁCE} & \large \B{\@mentor} & \\
 		\end{tabularx}
 		\setlength{\tabcolsep}{6pt}
         \renewcommand{\arraystretch}{1.0}
