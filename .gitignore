@@ -10,3 +10,4 @@ text.fdb_latexmk
 text.toc
 *.te~
 *.log
+*.~vsdm
